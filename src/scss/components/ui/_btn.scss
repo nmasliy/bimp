@@ -1,0 +1,165 @@
+.btn-primary {
+  display: inline-block;
+  border: 1px solid $primary-color;
+  border-radius: 10px;
+  padding: 19px 40px;
+  box-shadow: none;
+  font-family: $font-main;
+  font-weight: 700;
+  font-size: 15px;
+  text-align: center;
+  color: $white-color;
+  background: $primary-color;
+  transition: background-color $transition;
+  cursor: pointer;
+
+  &--sm {
+    padding: 9px 20px;
+    font-weight: 500;
+    font-size: 14px;
+  }
+
+  @include hover {
+    background-color: #242f8a;
+  }
+}
+
+.btn-orange {
+  display: inline-block;
+  border: 1px solid $orange-color;
+  border-radius: 10px;
+  padding: 19px 40px;
+  box-shadow: none;
+  font-family: $font-main;
+  font-weight: 700;
+  font-size: 15px;
+  text-align: center;
+  color: $white-color;
+  background: $orange-color;
+  transition: border-color $transition, color $transition, background-color $transition;
+  cursor: pointer;
+
+  &--sm {
+    padding: 9px 20px;
+    font-weight: 500;
+    font-size: 14px;
+
+    @include hover {
+      border-color: $white-color;
+      color: $black-color;
+      background-color: $white-color;
+    }
+  }
+
+  @include hover {
+    border-color: $orange-color;
+    color: $orange-color;
+    background-color: $white-color;
+  }
+}
+
+.btn-outline {
+  display: inline-block;
+  border: 1px solid #070414;
+  border-radius: 10px;
+  padding: 19px 40px;
+  box-shadow: none;
+  font-family: $font-main;
+  font-weight: 700;
+  font-size: 15px;
+  text-align: center;
+  color: $black-color;
+  background: 0;
+  transition: background-color $transition, color $transition, border-color $transition;
+  cursor: pointer;
+
+  @include hover {
+    border-color: $primary-color;
+    color: $primary-color;
+  }
+
+  /* stylelint-disable-next-line order/order */
+  &--sm {
+    padding: 9px 20px;
+    font-weight: 500;
+    font-size: 14px;
+  }
+
+  &--white {
+    border-color: rgba($white-color, 0.8);
+    color: rgba($white-color, 0.8);
+
+    @include hover {
+      border-color: $white-color;
+      color: $white-color;
+    }
+  }
+
+  &--primary {
+    border-color: $primary-color;
+    color: $primary-color;
+
+    @include hover {
+      color: $white-color;
+      background-color: $primary-color;
+    }
+  }
+}
+
+.btn-icon {
+  display: inline-block;
+  border: 1px solid rgba(255, 255, 255, 50%);
+  border-radius: 8px;
+  padding: 12px 52px 12px 28px;
+  font-weight: 400;
+  font-size: 13px;
+  color: $white-color;
+  background: url("../img/telegram-icon.svg") center right 28px no-repeat;
+  transition: border-color $transition;
+
+  @include hover {
+    border-color: $white-color;
+  }
+}
+
+.btn-icon-primary {
+  display: inline-block;
+  border: 1px solid $primary-color;
+  border-radius: 8px;
+  padding: 12px 52px 12px 28px;
+  font-weight: 400;
+  font-size: 13px;
+  color: $white-color;
+  background: url("../img/telegram-icon.svg") center right 28px no-repeat;
+  background-color: $primary-color;
+  transition: border-color $transition;
+
+  @include hover {
+    border-color: $white-color;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .btn-outline,
+  .btn-primary {
+    padding: 18px 20px;
+    font-size: 14px;
+
+    &--sm {
+      padding: 10px 20px;
+    }
+  }
+
+  .btn-outline {
+    border-color: $white-color;
+
+    &--primary {
+      border-color: $primary-color;
+    }
+  }
+
+  .btn-icon,
+  .btn-icon-primary {
+    padding: 15px 52px 15px 28px;
+  }
+}

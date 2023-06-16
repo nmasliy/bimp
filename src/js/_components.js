@@ -1,0 +1,14 @@
+import './components/menu';
+import './components/modals';
+import './components/sliders';
+import './components/animations';
+import './components/animations-base';
+import './components/forms';
+import './components/privacy';
+import './components/tabs';
+import './components/fslightbox';
+import './components/faq';
+import './components/adaptive';
+import './components/directions';
+import './components/plans';
+import './components/team';

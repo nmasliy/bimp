@@ -1,0 +1,121 @@
+.form {
+  &__input {
+    display: block;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px 12px;
+    width: 100%;
+    box-shadow: none;
+    font: inherit;
+    font-weight: 400;
+    font-size: 14px;
+    color: inherit;
+    background: #f0f0f0;
+
+    &::placeholder {
+      color: #999;
+      opacity: 1;
+    }
+
+    &:focus,
+    &:active {
+      outline: none;
+      border-color: rgba($primary-color, 0.3);
+    }
+  }
+
+  &__error {
+    display: inline-block;
+    margin-top: 5px;
+    font-size: 14px;
+    opacity: 0.8;
+  }
+
+  &__items {
+    margin-bottom: 40px;
+  }
+
+  &__item {
+    @include mb(10px);
+
+    display: block;
+    cursor: pointer;
+
+    > span {
+      display: inline-block;
+      margin-bottom: 6px;
+      font-size: 14px;
+      opacity: 0.8;
+    }
+  }
+
+  &__btn {
+    width: 100%;
+  }
+
+  &__caption {
+    margin: 10px auto 0;
+    max-width: 228px;
+    font-weight: 300;
+    font-size: 12px;
+    text-align: center;
+    opacity: 0.8;
+
+    a {
+      font-weight: 500;
+
+      @include hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.iti {
+  z-index: 22;
+  display: block;
+  height: 41px;
+  color: $black-color;
+
+  .iti__flag-container {
+    padding: 0;
+    height: 41px;
+  }
+}
+
+.iti__country-list {
+  width: 100%;
+
+  &::-webkit-scrollbar {
+    border-radius: 16px;
+    width: 6px;
+    height: 6px;
+    background: rgba($primary-color, 0.5);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 16px;
+    background: $primary-color;
+  }
+}
+
+.iti__selected-flag {
+  width: 90px;
+}
+
+.iti--allow-dropdown .iti__flag-container,
+.iti--separate-dial-code .iti__flag-container {
+  left: 0;
+  right: 0;
+}
+
+.iti__flag {
+  background-image: url("../img/flags.png");
+}
+
+/* stylelint-disable-next-line media-feature-name-no-unknown */
+@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .iti__flag {
+    background-image: url("../img/flags@2x.png");
+  }
+}

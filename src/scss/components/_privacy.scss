@@ -1,0 +1,195 @@
+.privacy {
+  overflow: hidden;
+
+  &__section-wrapper {
+    position: relative;
+    margin: 0 auto;
+    max-width: 1920px;
+
+    &::before {
+      @include bg-circle(300px);
+
+      left: -250px;
+      top: -200px;
+      width: 600px;
+      background: #f64b15;
+      opacity: 0.13;
+      filter: blur(150px);
+    }
+  }
+
+  &__title {
+    margin: 0 auto 30px;
+    max-width: 1020px;
+    text-align: center;
+  }
+
+  &__subtitle {
+    margin: 0 auto 60px;
+    max-width: 733px;
+    font-size: 22px;
+    text-align: center;
+  }
+
+  &__list {
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(3, 1fr);
+    min-height: 420px;
+    gap: 20px;
+  }
+
+  &__item {
+    border: 1px solid rgba(7, 4, 20, 10%);
+    border-radius: 14px;
+    padding: 30px 23px;
+    box-shadow: 0 30px 44px rgba(236, 237, 237, 30%);
+    background: #fbfbfb;
+    transition: $transition;
+    cursor: pointer;
+
+    &.is-active {
+      background: #f1f3ff;
+
+      .privacy__text {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__icon {
+    margin-bottom: 30px;
+
+    img {
+      vertical-align: middle;
+    }
+  }
+
+  &__name {
+    margin-bottom: 30px;
+    font-family: $font-secondary;
+    font-weight: 600;
+    font-size: 21px;
+  }
+
+  &__text {
+    overflow: hidden;
+    max-height: 0;
+    letter-spacing: 0.005em;
+    opacity: 0;
+    transition: opacity $transition, max-height $transition;
+    will-change: max-height, opacity;
+
+    p {
+      @include mb(20px);
+    }
+  }
+
+  .swiper-pagination {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .privacy {
+    &__title {
+      max-width: 920px;
+    }
+
+    &__subtitle {
+      font-size: 20px;
+    }
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .privacy {
+    &__title {
+      max-width: 740px;
+    }
+
+    &__subtitle {
+      font-size: 18px;
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .privacy {
+    &__item {
+      padding: 16px;
+    }
+
+    &__name {
+      margin-bottom: 15px;
+      font-size: 18px;
+    }
+
+    &__icon {
+      margin-bottom: 15px;
+
+      img {
+        width: 36px;
+      }
+    }
+
+    &__title {
+      margin-bottom: 14px;
+      max-width: 640px;
+    }
+
+    &__subtitle {
+      margin-bottom: 24px;
+      font-size: 16px;
+    }
+
+    &__text {
+      p {
+        @include mb(8px);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .privacy {
+    &__item {
+      padding-bottom: 21px;
+      height: auto;
+      box-sizing: border-box;
+      background: #f1f3ff;
+
+      &:nth-child(2) {
+        order: -1;
+      }
+    }
+
+    &__list {
+      display: flex;
+      align-items: stretch;
+      min-height: auto;
+      gap: 0;
+    }
+
+    &__text {
+      max-height: none;
+      opacity: 1;
+    }
+
+    .swiper-pagination {
+      display: block;
+    }
+
+    &__name {
+      font-size: 21px;
+    }
+
+    &__title {
+      max-width: 560px;
+    }
+
+    &__subtitle {
+      font-size: 15px;
+    }
+  }
+}

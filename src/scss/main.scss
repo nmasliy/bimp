@@ -1,0 +1,31 @@
+// библиотеки
+@import "../../node_modules/intl-tel-input/build/css/intlTelInput.min";
+
+// базовые подключения
+@import "vars";
+@import "mixins";
+@import "fonts";
+@import "global";
+
+// подключения компонентов страницы
+@import "./components/ui";
+@import "./components/header";
+@import "./components/hero";
+@import "./components/work";
+@import "./components/management";
+
+// @import "./components/management-sticky";
+
+// @import "./components/management-temp";
+@import "./components/problems";
+@import "./components/directions";
+@import "./components/systems";
+@import "./components/plans";
+@import "./components/privacy";
+@import "./components/team";
+@import "./components/about";
+@import "./components/reviews";
+@import "./components/vacancies";
+@import "./components/faq";
+@import "./components/support";
+@import "./components/footer";

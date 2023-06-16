@@ -1,0 +1,55 @@
+html {
+  overflow-x: hidden;
+  box-sizing: border-box;
+  -webkit-text-size-adjust: 100%;
+}
+
+*,
+*::before,
+*::after {
+  outline-color: rgba($primary-color, 0.2);
+  box-sizing: inherit;
+}
+
+body {
+  overflow-x: hidden;
+  margin: 0;
+  min-width: 320px;
+  min-height: 100%;
+  font-family: $font-main;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.4;
+  color: $lightblack-color;
+  background-color: $white-color;
+}
+
+img,
+video {
+  height: auto;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+b,
+strong {
+  font-weight: 700;
+}
+
+input,
+button,
+select,
+textarea {
+  font: inherit;
+}
+
+@media screen and (max-width: 1024px) {
+  body {
+    font-size: 14px;
+  }
+}

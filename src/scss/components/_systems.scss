@@ -1,0 +1,163 @@
+.systems {
+  &__inner {
+    margin: 0 auto;
+    max-width: 1150px;
+  }
+
+  &__title {
+    margin-bottom: 20px;
+  }
+
+  &__subtitle {
+    margin: 0 auto 60px;
+    max-width: 530px;
+    font-size: 22px;
+    letter-spacing: 0.5px;
+    text-align: center;
+  }
+
+  &__list-main {
+    display: flex;
+    justify-content: center;
+    margin: -18px;
+    padding-bottom: 35px;
+
+    li {
+      margin: 18px;
+      border-radius: 6px;
+      padding: 30px;
+      text-align: center;
+      background: #f1f3ff;
+    }
+
+    img {
+      vertical-align: middle;
+      width: 186px;
+    }
+  }
+
+  &__row {
+    display: none;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: -8px;
+
+    li {
+      margin: 8px;
+      border-radius: 3px;
+      padding: 17px;
+      text-align: center;
+      background: #f1f3ff;
+
+      &:hover {
+        img {
+          opacity: 1;
+          filter: grayscale(0) brightness(1);
+        }
+      }
+    }
+
+    img {
+      vertical-align: middle;
+      width: 98px;
+      opacity: 0.5;
+      filter: grayscale(1) brightness(0.2);
+      transition: $transition;
+    }
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .systems {
+    &__subtitle {
+      font-size: 18px;
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .systems {
+    &__list-main {
+      flex-wrap: wrap;
+      margin: -3px;
+      padding-bottom: 7px;
+
+      img {
+        width: 134px;
+      }
+
+      li {
+        margin: 3px;
+        padding: 15px;
+      }
+    }
+
+    &__list {
+      margin: -3px;
+
+      img {
+        width: 63px;
+      }
+
+      li {
+        margin: 3px;
+        padding: 10px;
+      }
+    }
+
+    &__subtitle {
+      margin-bottom: 24px;
+      font-size: 16px;
+    }
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .systems {
+    &__list-main {
+      li {
+        width: calc(50% - 6px);
+        text-align: center;
+
+        &:nth-child(3) {
+          order: 5;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .systems {
+    &__subtitle {
+      font-size: 15px;
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .systems {
+    &__row {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+    }
+
+    &__list {
+      li {
+        width: calc(25% - 6px);
+
+        &:nth-last-child(3) {
+          &::before {
+            content: "";
+            display: block;
+          }
+        }
+      }
+    }
+  }
+}

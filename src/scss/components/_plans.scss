@@ -1,0 +1,473 @@
+.plans {
+  &__section-wrapper {
+    padding: 32px 0;
+    background-color: $black-color;
+  }
+
+  &__inner {
+    margin: 0 auto;
+    padding: 70px 0;
+    width: 100%;
+    max-width: 1024px;
+  }
+
+  &__wrapper {
+    position: relative;
+    overflow: hidden;
+    border-radius: 30px;
+    padding: 0 15px;
+    background-color: #f1f3ff;
+  }
+
+  &__title {
+    margin-bottom: 60px;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgba(7, 4, 20, 10%);
+    border-radius: 14px;
+    box-shadow: 0 30px 44px rgba(236, 237, 237, 30%);
+    background-color: #fbfbfb;
+  }
+
+  &__head {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 14px 14px 0 0;
+    padding: 32px;
+    min-height: 275px;
+    background: linear-gradient(248.8deg, rgba(23, 48, 250, 30%) -17.58%, rgba(255, 255, 255, 0%) 80.66%), #fff;
+
+    &--orange {
+      background: linear-gradient(248.8deg, rgba(246, 75, 21, 25%) -17.58%, rgba(255, 255, 255, 0%) 80.66%), #fff;
+    }
+  }
+
+  &__name {
+    margin-bottom: 7px;
+    font-family: $font-secondary;
+    font-weight: 600;
+    font-size: 35px;
+    line-height: 1.1;
+    text-align: center;
+    color: rgba(7, 4, 20, 85%);
+  }
+
+  &__caption {
+    margin-bottom: 10px;
+    font-weight: 600;
+    font-size: 18px;
+    text-align: center;
+  }
+
+  &__price {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 13px;
+  }
+
+  &__price-value {
+    display: flex;
+    align-items: flex-start;
+    margin-right: 12px;
+    font-family: $font-secondary;
+    font-size: 80px;
+    line-height: 1.1;
+    color: $primary-color;
+
+    span {
+      display: inline-block;
+      margin-top: 7px;
+      margin-right: 7px;
+      font-weight: 600;
+      font-size: 30px;
+      line-height: 1.2;
+      letter-spacing: 0.1px;
+    }
+  }
+
+  &__price-extra {
+    color: $black-color;
+  }
+
+  &__price-items {
+    margin-bottom: 10px;
+    border-radius: 14px;
+    padding: 2px 10px;
+    box-shadow: 0 1px 20px rgba(0, 0, 0, 10%);
+    font-size: 14px;
+    background-color: #fbfbfb;
+
+    span {
+      @include mr(5px);
+    }
+  }
+
+  &__price-old {
+    text-decoration-line: line-through;
+    color: #999ebf;
+  }
+
+  &__price-caption {
+    font-weight: 600;
+    font-size: 18px;
+  }
+
+  &__radios {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__radio {
+    @include mr(10px);
+
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-top: 15px;
+    padding-right: 30px;
+    cursor: pointer;
+
+    input {
+      display: none;
+
+      &:checked ~ {
+        .plans__radio-el {
+          &::before {
+            opacity: 1;
+          }
+        }
+      }
+    }
+
+    &:last-child {
+      padding-right: 0;
+    }
+
+    @include hover {
+      .plans__radio-el::before {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__radio-text {
+    font-family: $font-secondary;
+    font-size: 14px;
+    line-height: normal;
+  }
+
+  &__radio-discount {
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-family: $font-secondary;
+    font-size: 12px;
+    color: #8488a0;
+  }
+
+  &__radio-el {
+    position: relative;
+    display: block;
+    margin-right: 10px;
+    border: 1px solid $primary-color;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    background: $white-color;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      border-radius: 50%;
+      width: 12px;
+      height: 12px;
+      background-color: $primary-color;
+      opacity: 0;
+      transform: translate(-50%, -50%);
+      transition: opacity $transition;
+    }
+  }
+
+  &__body {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    padding: 25px 50px 54px;
+
+    ul {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__body-title {
+    margin-bottom: 19px;
+    font-weight: 700;
+    letter-spacing: 0.2px;
+    text-align: center;
+    color: $primary-color;
+  }
+
+  &__btn {
+    margin-top: auto;
+  }
+
+  &__subtitle {
+    margin: 25px 0 22px;
+    font-weight: 600;
+    font-size: 18px;
+    text-align: center;
+    color: $black-color;
+  }
+
+  &__body-more {
+    display: none;
+  }
+
+  &__link {
+    border-bottom: 1px solid transparent;
+    font-weight: 700;
+    letter-spacing: 0.2px;
+    text-align: center;
+    color: $black-color;
+
+    @include hover {
+      border-color: $black-color;
+    }
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .plans {
+    &__name {
+      font-size: 32px;
+    }
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .plans {
+    &__head {
+      padding: 24px;
+    }
+
+    &__body {
+      padding: 20px 24px 24px;
+    }
+
+    &__btn {
+      padding: 19px;
+    }
+
+    &__name {
+      font-size: 30px;
+    }
+
+    &__price-value {
+      font-size: 74px;
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .plans {
+    &__inner {
+      padding: 45px 0;
+    }
+
+    &__price-value {
+      font-size: 70px;
+    }
+
+    &__name {
+      font-size: 28px;
+    }
+
+    &__section-wrapper {
+      padding: 16px 0;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .plans {
+    &__wrapper {
+      border-radius: 16px;
+    }
+
+    &__section-wrapper {
+      padding: 8px 0;
+    }
+
+    &__caption {
+      font-size: 15px;
+    }
+
+    &__title {
+      margin-bottom: 25px;
+    }
+
+    &__btn {
+      margin-bottom: 15px;
+    }
+
+    &__body-info {
+      display: none;
+      font-size: 13px;
+    }
+
+    &__head {
+      border-radius: 14px;
+      min-height: auto;
+      background: transparent;
+    }
+
+    &__body-more {
+      display: inline-block;
+      align-self: center;
+      padding-right: 20px;
+      font-weight: 700;
+      font-size: 14px;
+      letter-spacing: 0.2px;
+      text-align: center;
+      color: $black-color;
+      background: url("../img/chevron-down-icon.svg") center right no-repeat;
+    }
+
+    &__body {
+      padding-top: 0;
+    }
+
+    &__link {
+      display: none;
+    }
+
+    &__subtitle {
+      margin-top: 12px;
+      padding-bottom: 20px;
+      font-size: 15px;
+    }
+
+    &__name {
+      margin-bottom: 4px;
+      font-size: 24px;
+    }
+
+    &__price-value {
+      margin-right: 8px;
+      font-size: 66px;
+    }
+
+    &__price-items {
+      margin-bottom: 8px;
+    }
+
+    &__price-caption {
+      font-size: 15px;
+    }
+
+    &__item {
+      @include mb(23px);
+
+      border-radius: 14px;
+      background: linear-gradient(248.8deg, rgba(23, 48, 250, 30%) -10.58%, rgba(255, 255, 255, 0%) 118.66%), #fff;
+
+      &.is-active {
+        background: #fbfbfb;
+
+        .plans {
+          &__btn {
+            &.btn-outline {
+              color: $white-color;
+              background-color: $primary-color;
+            }
+          }
+
+          &__link {
+            display: inline-block;
+          }
+
+          &__body {
+            padding-top: 20px;
+          }
+
+          &__head {
+            background: linear-gradient(248.8deg, rgba(23, 48, 250, 30%) -10.58%, rgba(255, 255, 255, 0%) 118.66%), #fff;
+
+            &--orange {
+              background: linear-gradient(248.8deg, rgba(246, 75, 21, 20%) -10.58%, rgba(255, 255, 255, 0%) 118.66%), #fff;
+            }
+          }
+
+          &__body-info {
+            display: block;
+          }
+        }
+      }
+
+      &--orange {
+        background: linear-gradient(248.8deg, rgba(246, 75, 21, 20%) -10.58%, rgba(255, 255, 255, 0%) 118.66%), #fff;
+      }
+    }
+
+    &__list {
+      display: block;
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .plans__btn {
+    padding: 18px 3px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .plans {
+    &__wrapper {
+      padding: 0 12px;
+    }
+
+    &__head {
+      padding: 24px 16px;
+    }
+
+    &__body {
+      padding-right: 16px;
+      padding-left: 16px;
+    }
+
+    &__price-items {
+      padding: 2px 6px;
+    }
+
+    &__price-value {
+      font-size: 57px;
+    }
+
+    &__radio {
+      padding-right: 11px;
+    }
+
+    &__radio-el {
+      margin-right: 6px;
+    }
+
+    &__radio-discount {
+      right: 7px;
+    }
+  }
+}

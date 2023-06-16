@@ -1,0 +1,24 @@
+// base
+:root {
+  --content-width: 1280px;
+  --container-offset: 16px;
+  --container-width: calc(var(--content-width) + var(--container-offset) * 2);
+}
+
+$font-main: "Manrope", sans-serif;
+$font-secondary: "TTFirsNeue", sans-serif;
+$transition: 0.225s ease-in-out;
+$menu-transition: 0.3s ease-in-out;
+
+// colors
+$white-color: #fff;
+$black-color: #070414;
+$lightblack-color: #130e28;
+$primary-color: #2936a3;
+$orange-color: #f64b15;
+
+@media screen and (max-width: 1024px) {
+  :root {
+    --container-offset: 8px;
+  }
+}

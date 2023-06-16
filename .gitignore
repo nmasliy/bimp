@@ -1,0 +1,9 @@
+/node_modules
+.idea
+.vscode
+screen.png
+mail.php
+**/*.php
+*.zip
+*.rar
+*.7z
