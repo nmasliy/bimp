@@ -33,7 +33,7 @@ function initManagementAnimations() {
     // gsap.set(".management__item", { zIndex: (i, target, targets) => targets.length - i });
     
     items.forEach((item, i) => {
-      item.classList.add('is-active');
+      // item.classList.add('is-active');
 
       // var tl = gsap.timeline({
         
