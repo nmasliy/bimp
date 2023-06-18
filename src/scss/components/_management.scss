@@ -286,16 +286,17 @@
   }
 
   .management {
+    overflow: hidden;
     padding-bottom: 70px;
     min-height: auto;
 
     &__inner {
       padding-top: 20px;
       padding-bottom: 0;
+      height: 100vh;
     }
 
     &__items {
-      overflow: hidden;
       padding-top: 15px;
 
       &::before,

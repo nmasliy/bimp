@@ -46,10 +46,12 @@ function initManagementAnimations() {
 
     cards.forEach((card, index) => {
       card.style.height = maxCardHeight + 'px';
-
+      
       if(index > 0){
-        gsap.set(card, {y:index * (cards[index - 1].offsetHeight), height: maxCardHeight})
-        animation.to(card, {y:0, duration:index*0.5, ease:"none"},0)
+        let cardTranslateY = index * (cards[index - 1].offsetHeight);
+
+        gsap.set(card, {y: cardTranslateY, height: maxCardHeight})
+        animation.to(card, {y: index * 10, duration:index*0.5, ease:"none"},0)
       }
 
       gsap.to(card, {
@@ -216,7 +218,7 @@ function initManagementAnimations() {
   ScrollTrigger.create({
     trigger: ".management",
     // scrub: true,
-    markers: true,
+    // markers: true,
     pin: true,
     start: () => "top top",
     end: () => "+=" + ((images.length - 0.5) * managementHeight),
