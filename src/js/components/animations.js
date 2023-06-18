@@ -42,13 +42,13 @@ function initManagementAnimations() {
       }
     })
 
-    cardsHeight = maxCardHeight * (cards.length - 1);
+    cardsHeight = maxCardHeight * (cards.length);
 
     cards.forEach((card, index) => {
       card.style.height = maxCardHeight + 'px';
       
       if(index > 0){
-        let cardTranslateY = index * (cards[index - 1].offsetHeight);
+        let cardTranslateY = index * (cards[index - 1].offsetHeight) + (index * 36);
 
         gsap.set(card, {y: cardTranslateY, height: maxCardHeight})
         animation.to(card, {y: index * 10, duration:index*0.5, ease:"none"},0)
