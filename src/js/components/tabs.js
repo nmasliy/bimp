@@ -13,11 +13,11 @@ window.addEventListener('resize', throttle(init));
 if (window.innerWidth > 1024) {
 	initTabs('.about__tabs li', '.about__item');
 }
-else {
-	initTabsFade('.management__item', '.management__img-item', () => {
-		scrollWithOffset(document.querySelector('.management__inner'));
-	}, false);
-}
+// else {
+// 	initTabsFade('.management__item', '.management__img-item', () => {
+// 		scrollWithOffset(document.querySelector('.management__inner'));
+// 	}, false);
+// }
 
 function init() {
 	if (window.innerWidth <= 1024) {

@@ -28,44 +28,74 @@ function initManagementAnimations() {
 
   // if (ScrollTrigger.isTouch === 1) {
   if (window.innerWidth <= 1024) {
-    const items = gsap.utils.toArray('.management__item');
-    
-    // gsap.set(".management__item", { zIndex: (i, target, targets) => targets.length - i });
-    
-    items.forEach((item, i) => {
-      // item.classList.add('is-active');
+    const cardsWrapper  = document.querySelector('.management__items');
+    const cards  = document.querySelectorAll('.management__item');
+    const animation = gsap.timeline();
+    let maxCardHeight = 0;
+    let cardsHeight = 0;
 
-      // var tl = gsap.timeline({
-        
-      //   scrollTrigger: {
-      //     trigger: item,
-      //     start: () => "top -" + (managementHeight*(i+0.8)),
-      //     end: () => "+=" + item.offsetHeight,
-      //     toggleActions: "play none reverse none",
-      //     invalidateOnRefresh: true,     
-      //   }
-      // })
+    cards.forEach(card => {
+      card.classList.add('is-active');
 
-      // tl
-      // .to(item, { duration: 0.33, opacity: 1, y:"-100%" })  
-    });
-    
-    
+      if (card.offsetHeight > maxCardHeight) {
+        maxCardHeight = card.offsetHeight;
+      }
+    })
 
-    // const itemsHeight = calculateSectionHeight();
-    // const imgWrapper = document.querySelector('.management__img');
+    cardsHeight = maxCardHeight * (cards.length - 1);
 
-    // gsap.to('.management__inner', {
-    //   scrollTrigger: {
-    //     trigger: ".management",
-    //     start: () => "top top",
-    //     end: () => "+=" + document.querySelector('.management').offsetHeight,
-    //     pin: true,
-    //     markers: true
-    //   }
-    // })
+    cards.forEach((card, index) => {
+      card.style.height = maxCardHeight + 'px';
 
-    
+      if(index > 0){
+        gsap.set(card, {y:index * (cards[index - 1].offsetHeight), height: maxCardHeight})
+        animation.to(card, {y:0, duration:index*0.5, ease:"none"},0)
+      }
+
+      gsap.to(card, {
+        scrollTrigger: {
+          // markers: true,
+          trigger: card,
+          start: 'top 40%',
+          end: '+=30%',
+          toggleActions: "play none reverse none",
+          onEnter: () => {
+            changeImages();
+          },
+          onEnterBack: () => {
+            changeImages();
+          }
+        }
+      })
+
+      function changeImages() {
+        const activeImg = document.querySelector('.management__img-item.is-active'); 
+        const currentId = card.dataset.tabs;
+        const currentImg = document.querySelector('.management__img-item[data-tabs="' + currentId + '"]'); 
+        if (activeImg && activeImg.dataset.tabs != currentImg.dataset.tabs) {
+          activeImg.classList.remove('is-active');
+          gsap.to(activeImg, { opacity: 0 })
+          
+          currentImg.classList.add('is-active');
+          gsap.to(currentImg, { opacity: 1 })
+        }
+      }
+    })
+
+    cardsWrapper.style.height = maxCardHeight + 'px';
+
+
+    ScrollTrigger.create({
+      trigger:".management__inner",
+      start:"top top",
+      pin:true,
+      end:`+=${cardsHeight}`,
+      scrub:true,
+      animation:animation,
+    })
+
+
+
     return;
   }
   
