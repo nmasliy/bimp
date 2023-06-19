@@ -70,10 +70,14 @@
   }
 
   &__price {
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
     margin-bottom: 13px;
+
+    &.is-active {
+      display: flex;
+    }
   }
 
   &__price-value {
@@ -238,6 +242,7 @@
   }
 
   &__link {
+    margin-top: auto;
     border-bottom: 1px solid transparent;
     font-weight: 700;
     letter-spacing: 0.2px;

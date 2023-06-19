@@ -16,7 +16,7 @@ export function initTabsSimple(triggerSelector, parentSelector, onChange) {
 
     triggerNodes.forEach((triggerNode) => {
       triggerNode.addEventListener('click', (e) => {
-        e.preventDefault();
+        // e.preventDefault();
 
         if (triggerNode.classList.contains('is-active')) return;
 
@@ -46,7 +46,7 @@ export function initTabsSimple(triggerSelector, parentSelector, onChange) {
   }
 }
 
-export function initTabs(triggerSelector, parentSelector, onChange) {
+export function initTabs(triggerSelector, parentSelector, onChange, breakpoint) {
   const triggerNodes = document.querySelectorAll(triggerSelector);
   const parentNodes = document.querySelectorAll(parentSelector);
 
@@ -58,6 +58,8 @@ export function initTabs(triggerSelector, parentSelector, onChange) {
 
     triggerNodes.forEach((triggerNode) => {
       triggerNode.addEventListener('click', (e) => {
+        if (breakpoint && window.innerWidth <= breakpoint) return;
+
         e.preventDefault();
 
         if (triggerNode.classList.contains('is-active') || isAnimated) return;

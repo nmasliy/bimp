@@ -82,19 +82,10 @@
   }
 
   &__item {
-    display: none;
     border-radius: 30px;
     padding: 50px 50px 50px 203px;
     background: url("../img/quotes-icon.svg") left 46px top 56px no-repeat;
     background-color: #f1f3ff;
-    opacity: 0;
-    transform: scale(0);
-    transition: 0.4s ease-in-out;
-    will-change: transform, opacity;
-
-    &.is-active {
-      display: block;
-    }
   }
 
   &__text {
@@ -189,6 +180,20 @@
   }
 }
 
+@media screen and (min-width: 1025px) {
+  .about__item {
+    display: none;
+    opacity: 0;
+    transform: scale(0);
+    transition: 0.4s ease-in-out;
+    will-change: transform, opacity;
+
+    &.is-active {
+      display: block;
+    }
+  }
+}
+
 @media screen and (max-width: 1024px) {
   .about {
     &__item {
@@ -196,13 +201,6 @@
       flex-direction: column;
       height: auto;
       box-sizing: border-box;
-      opacity: 1;
-      transform: none;
-      transition: none;
-
-      &.is-active {
-        display: flex;
-      }
     }
 
     &__title {
