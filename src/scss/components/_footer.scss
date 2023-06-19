@@ -336,3 +336,25 @@
     }
   }
 }
+
+@media screen and (max-width: 379px) {
+  .footer {
+    &__phone {
+      margin-left: -15px;
+      font-size: 12px;
+    }
+
+    &__col {
+      padding: 0 10px;
+
+      &:last-child {
+        padding: 0 10px;
+      }
+    }
+
+    &__list li:nth-child(2),
+    &__list li:nth-child(1) {
+      width: 100%;
+    }
+  }
+}

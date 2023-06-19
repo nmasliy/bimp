@@ -4,7 +4,8 @@
   }
 
   &__subtitle {
-    margin-bottom: 60px;
+    margin: 0 auto 60px;
+    max-width: 1015px;
     font-size: 22px;
     letter-spacing: 0.5px;
     text-align: center;
@@ -87,6 +88,7 @@
 @media screen and (max-width: 1280px) {
   .directions {
     &__subtitle {
+      max-width: 865px;
       font-size: 18px;
     }
 
@@ -121,6 +123,7 @@
     }
 
     &__title {
+      display: inline;
       margin-bottom: 14px;
     }
 

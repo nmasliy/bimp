@@ -50,15 +50,6 @@
       transition: border-color $transition;
       cursor: pointer;
 
-      &.is-active {
-        border-color: $primary-color;
-
-        img {
-          opacity: 1;
-          filter: grayscale(0);
-        }
-      }
-
       @include hover {
         border-color: $primary-color;
 
@@ -181,6 +172,17 @@
 }
 
 @media screen and (min-width: 1025px) {
+  .about__tabs li {
+    &.is-active {
+      border-color: $primary-color;
+
+      img {
+        opacity: 1;
+        filter: grayscale(0);
+      }
+    }
+  }
+
   .about__item {
     display: none;
     opacity: 0;
@@ -239,6 +241,11 @@
 
         &.swiper-slide-thumb-active {
           background: #e7eafd;
+
+          img {
+            opacity: 1;
+            filter: grayscale(0);
+          }
         }
       }
     }

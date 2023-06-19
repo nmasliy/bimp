@@ -33,6 +33,10 @@ const menu = new Menu({
 
 const select = document.querySelector('.header__languages');
 
-select.addEventListener('click', () => {
-	select.classList.toggle('is-active');
+document.body.addEventListener('click', (e) => {
+  if (e.target.closest('.header__languages')) {
+    select.classList.toggle('is-active');
+  } else {
+    select.classList.remove('is-active');
+  }
 });
