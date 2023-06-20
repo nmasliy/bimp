@@ -1,7 +1,5 @@
 .hero {
   padding: 0 32px;
-  height: calc(100vh - var(--header-height));
-  min-height: 860px;
   color: $black-color;
   background-color: $black-color;
 
@@ -63,7 +61,7 @@
     overflow: hidden;
     margin: 0 auto;
     border-radius: 30px;
-    padding: 30px 0;
+    padding: 50px 0;
     width: 100%;
     max-width: 1920px;
     background: $white-color;
@@ -314,7 +312,7 @@
 
 @media screen and (max-width: 1600px) {
   .hero {
-    padding: 15px;
+    padding: 0 15px;
 
     &__title {
       font-size: 72px;
@@ -353,10 +351,20 @@
     &__partners {
       padding: 25px 0 40px;
 
+      img {
+        width: 150px;
+      }
+
       ul {
         justify-content: center;
       }
     }
+  }
+}
+
+@media screen and (max-width: 1336px) {
+  .hero__award img {
+    width: 193px;
   }
 }
 
@@ -407,10 +415,18 @@
 
 @media screen and (max-width: 1200px) {
   .hero {
+    padding-top: 8px;
+
+    &__bg {
+      right: calc(100% - 88px);
+      top: 203px;
+    }
+
     &__body {
+      overflow: hidden;
       border-radius: 16px;
       padding: 0 0 25px;
-      transition: background $transition;
+      transition: background-color $transition;
 
       &.is-active {
         background-color: $black-color;
@@ -579,7 +595,7 @@
     }
 
     &__inner {
-      padding-top: 50px;
+      padding-top: 10px;
     }
 
     &__award img {

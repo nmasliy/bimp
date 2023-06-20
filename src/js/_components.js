@@ -1,7 +1,7 @@
 import './components/menu';
 import './components/modals';
 import './components/sliders';
-import './components/animations';
+// import './components/animations';
 import './components/animations-base';
 import './components/forms';
 import './components/privacy';

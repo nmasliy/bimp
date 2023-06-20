@@ -1,5 +1,4 @@
 import { gsap } from 'gsap';
-import Stickyfill from 'stickyfilljs';
 
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
@@ -7,15 +6,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 
 initManagementAnimations();
-// initStickyCards();
 
-function initStickyCards() {
-  if (window.innerWidth <= 1024) {
-    var elements = document.querySelectorAll('.management__item');
-    Stickyfill.add(elements);
-    Stickyfill.forceSticky()
-  }
-}
 
 function initManagementAnimations() {
   const managementHeight = document.querySelector('.management').offsetHeight;

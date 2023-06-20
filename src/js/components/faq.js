@@ -14,35 +14,38 @@ items.forEach(item => {
 		text.style.maxHeight = text.scrollHeight + 'px'; 
 	}
 
-	if (window.innerWidth <= 1024) {
-		item.classList.add('is-mobile');
-		text.style.maxHeight = '';
-	} 
+	// if (window.innerWidth <= 1024) {
+	// 	item.classList.add('is-mobile');
+	// 	text.style.maxHeight = '';
+	// } 
 
 	item.addEventListener('click', () => {
 		const active = document.querySelector('.faq__item.is-active');
-		const activeText = active.querySelector('.faq__content');
+		const activeText = active?.querySelector('.faq__content');
 
-		if (active != item) {
-			
-				active.classList.remove('is-active');
+		if (!active) {
+			item.classList.add('is-active');
+			text.style.maxHeight = text.scrollHeight + 'px'; 
+			return;
+		}
 
-				if (window.innerWidth > 1024) {
-					activeText.style.maxHeight = ''; 
-					text.style.maxHeight = text.scrollHeight + 'px'; 
-				}
+		if (active == item) {
+			active.classList.remove('is-active');
+			activeText.style.maxHeight = ''; 
+			return;
+		}
 
-				item.classList.add('is-active');
-		
-			if (window.innerWidth <= 1024) {
-				scrollWithOffset(item, 10);
-				// let top = item.offsetTop - Math.abs(activeText.scrollHeight - text.scrollHeight);
-				// window.scroll({
-				// 	top: top,
-				// 	behavior: 'smooth'
-				// });
-			}
+		active.classList.remove('is-active');
+
+		activeText.style.maxHeight = ''; 
+		text.style.maxHeight = text.scrollHeight + 'px'; 
+
+		item.classList.add('is-active');
+
+		if (window.innerWidth <= 1024) {
+			// scrollWithOffset(item, 10);
 		}
 		
+
 	})
 })

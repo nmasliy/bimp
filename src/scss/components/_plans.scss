@@ -242,6 +242,10 @@
     display: none;
   }
 
+  &__body-info {
+    font-size: 14px;
+  }
+
   &__link {
     margin-top: auto;
     border-bottom: 1px solid transparent;
@@ -331,8 +335,11 @@
     }
 
     &__body-info {
-      display: none;
+      overflow: hidden;
+      max-height: 0;
       font-size: 13px;
+      opacity: 0;
+      transition: $transition;
     }
 
     &__head {
@@ -419,7 +426,7 @@
           }
 
           &__body-info {
-            display: block;
+            opacity: 1;
           }
         }
       }

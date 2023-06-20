@@ -114,7 +114,7 @@ export function initTabs(triggerSelector, parentSelector, onChange, breakpoint) 
   }
 }
 
-export function initTabsFade(triggerSelector, parentSelector, onChange, scroll = true) {
+export function initTabsFade(triggerSelector, parentSelector, onChange, scroll = true, breakpoint) {
   const triggerNodes = document.querySelectorAll(triggerSelector);
   const parentNodes = document.querySelectorAll(parentSelector);
   const startActive = document.querySelector(parentSelector + '.is-active');
@@ -127,6 +127,8 @@ export function initTabsFade(triggerSelector, parentSelector, onChange, scroll =
 
     triggerNodes.forEach((triggerNode) => {
       triggerNode.addEventListener('click', (e) => {
+        if (breakpoint && window.innerWidth <= breakpoint) return;
+
         e.preventDefault();
 
         if (triggerNode.classList.contains('is-active') || isAnimated) return;
@@ -166,14 +168,14 @@ export function initTabsFade(triggerSelector, parentSelector, onChange, scroll =
       });
     });
 
-    async function hide(el, duration = 400) {
+    async function hide(el, duration = 200) {
       el.style.transition = duration / 1000 + 's ease-in-out';
       el.style.opacity = 0;
 
       return waitFor(duration);
     }
 
-    async function show(el, duration = 400) {
+    async function show(el, duration = 250) {
       el.style.transition = duration / 1000 + 's ease-in-out';
       el.style.opacity = 1;
 

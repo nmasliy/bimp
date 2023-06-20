@@ -59,14 +59,14 @@
   }
 
   &__title {
-    margin-bottom: 9px;
     position: relative;
     z-index: 2;
+    margin-bottom: 6px;
     text-align: left;
   }
 
   &__subtitle {
-    margin-bottom: 38px;
+    margin-bottom: 34px;
     font-family: $font-secondary;
     font-weight: 600;
     font-size: 35px;

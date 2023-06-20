@@ -1,10 +1,10 @@
-import { initTabs, initTabsFade, initTabsSimple } from "../functions/tabs";
+import { initTabsFade, initTabsSimple } from "../functions/tabs";
 import { throttle } from "../functions/throttle";
 
 init();
-initTabs('.work__tab', '.work__tabs-content');
+initTabsFade('.work__tab', '.work__tabs-content');
 initTabsFade('.team__item', '.team__box');
-initTabs('.about__tabs li', '.about__item', false, 1024);
+initTabsFade('.about__tabs li', '.about__item', false, true, 1024);
 initTabsSimple('.plans__radio', '.plans__price');
 
 window.addEventListener('resize', throttle(init));
@@ -17,13 +17,11 @@ function init() {
 		const aboutItems = document.querySelectorAll('.about__item');
 		aboutItems.forEach(item => {
 			item.style.opacity = '';
-			item.style.transform = '';
 		});
 	}  else {
 		const aboutActive = document.querySelector('.about__item.is-active');
 		if (aboutActive) {
 			aboutActive.style.opacity = 1;
-			aboutActive.style.transform = 'scale(1)';
 		}
 	}
 }
