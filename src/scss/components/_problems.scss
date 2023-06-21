@@ -237,6 +237,20 @@
       }
     }
 
+    &__items {
+      > div {
+        img {
+          transform: none;
+          animation: none;
+        }
+
+        &.is-pulsing img {
+          transform: none;
+          animation: none;
+        }
+      }
+    }
+
     &__img {
       display: block;
       margin: 0 auto;

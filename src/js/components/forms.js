@@ -73,6 +73,11 @@ const rules = [
         rule: 'email',
         value: true,
         errorMessage:  isPageEn ? "Please enter a valid email address!" : 'Заповніть коректно Email!'
+      },
+      {
+        rule: 'customRegexp',
+        value: /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
+        errorMessage:  isPageEn ? "Please enter a valid email address!" : 'Заповніть коректно Email!'
       }
     ]
   },
@@ -117,6 +122,11 @@ const rules2 = [
       {
         rule: 'email',
         value: true,
+        errorMessage:  isPageEn ? "Please enter a valid email address!" : 'Заповніть коректно Email!'
+      },
+      {
+        rule: 'customRegexp',
+        value: /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
         errorMessage:  isPageEn ? "Please enter a valid email address!" : 'Заповніть коректно Email!'
       }
     ]

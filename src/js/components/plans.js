@@ -1,6 +1,9 @@
 import scrollWithOffset from '../functions/scrollWithOffset';
+import { throttle } from '../functions/throttle';
 
 const buttons = document.querySelectorAll('.plans__body-more');
+
+window.addEventListener('resize', throttle(resetHeight));
 
 buttons.forEach(btn => {
 	btn.addEventListener('click', (e) => {
@@ -31,3 +34,14 @@ buttons.forEach(btn => {
 		scrollWithOffset(item);
 	})
 })
+
+function resetHeight() {
+	const active = document.querySelector('.plans__item.is-active');
+	const activeText = active?.querySelector('.plans__body-info');
+
+	if (active && window.innerWidth > 768) {
+		active.classList.remove('is-active');
+		activeText.style.maxHeight = ''; 
+	}
+
+}

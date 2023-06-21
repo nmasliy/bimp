@@ -1,11 +1,11 @@
 import { moveElementOnBreakpoint } from '../functions/move-element';
 
-moveElementOnBreakpoint(
-  '.header',
-  { fromSelector: '.page-wrapper', fromPosition: 'afterbegin' },
-  { toSelector: '.hero__body', toPosition: 'afterbegin' },
-  1200
-);
+// moveElementOnBreakpoint(
+//   '.header',
+//   { fromSelector: '.page-wrapper', fromPosition: 'afterbegin' },
+//   { toSelector: '.hero__body', toPosition: 'afterbegin' },
+//   1200
+// );
 moveElementOnBreakpoint(
   '.header__nav ul',
   { fromSelector: '.header__nav', fromPosition: 'afterbegin' },
