@@ -14,22 +14,6 @@ buttons.forEach(button => {
   })
 })
 
-// const urlInputs = document.querySelectorAll('[data-input-url]');
-
-// urlInputs.forEach(el => {
-//   el.value = window.location.href;
-// })
-
-// const forms = document.querySelectorAll('.form');
-
-// forms.forEach(form => {
-//   const urlInput = form.querySelector('[data-input-url]');
-
-//   form.addEventListener('submit', (e) => {
-//     urlInput.value = window.location.href;
-//   })
-// })
-
 
 const isPageEn = document.body.classList.contains('page-en');
 
@@ -83,60 +67,10 @@ const rules = [
   },
 ];
 
-const rules2 = [
-  {
-    ruleSelector: '.form__input--name',
-    rules: [
-      {
-        rule: 'required',
-        value: true,
-        errorMessage: isPageEn ? "Please fill in your name!" : "Заповніть ім'я!"
-      },
-      {
-        rule: 'customRegexp',
-        value: /^([^0-9\\.!"'#%&,:;<>=@{}~\$\(\)\*\+\/\\\?\[\]\^\|]*)$/,
-        errorMessage: isPageEn ? "Please enter a valid name!" : "Заповніть коректно ім'я!"
-      },
-    ]
-  },
-  {
-    ruleSelector: '.form__input--tel',
-    tel: true,
-    telError: isPageEn ? "Please enter a valid phone number!" : "Заповніть коректно телефон!",
-    rules: [
-      {
-        rule: 'required',
-        value: true,
-        errorMessage: isPageEn ? "Please fill in your phone number!" : "Заповніть телефон!"
-      }
-    ]
-  },
-  {
-    ruleSelector: '.form__input--email',
-    rules: [
-      {
-        rule: 'required',
-        value: true,
-        errorMessage: isPageEn ? "Please fill in your email!" : 'Заповніть Email!'
-      },
-      {
-        rule: 'email',
-        value: true,
-        errorMessage:  isPageEn ? "Please enter a valid email address!" : 'Заповніть коректно Email!'
-      },
-      {
-        rule: 'customRegexp',
-        value: /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
-        errorMessage:  isPageEn ? "Please enter a valid email address!" : 'Заповніть коректно Email!'
-      }
-    ]
-  },
-];
 
 const afterSend = () => {
 
 }
 
 validateForms('#modal-form .form', rules, afterSend);
-validateForms('#modal-demo .form', rules2, afterSend);
 

@@ -1,0 +1,52 @@
+<div class="modal modal-form" id="modal-form" aria-hidden="true">
+	<div class="modal__wrapper">
+		<div class="modal__inner">
+			<form class="modal-form__element form" method="post">
+				<h3 class="modal__title">Leave an application</h3>
+				<h5 class="modal__subtitle">Fill&nbsp;out the&nbsp;form to&nbsp;receive a&nbsp;specialist consultation</h5>
+				<div class="form__items">
+					<label class="form__item">
+						<span>Your name</span>
+						<input type="text" name="Имя" class="form__input form__input--name">
+					</label>
+					<label class="form__item">
+						<span>Your e-mail</span>
+						<input type="text" name="Почта" class="form__input form__input--email">
+					</label>
+					<label class="form__item">
+						<span>Phone number</span>
+						<input type="tel" name="Телефон" class="form__input form__input--tel">
+					</label>
+					<input type="hidden" name="Язык" value="en">
+					<input class="input-price" type="hidden" name="Тариф" value="-">
+					<input class="input-request" type="hidden" name="Заявка" value="Залиште заявку">
+				</div>
+				<button class="form__btn btn-primary">Send an application</button>
+				<div class="form__caption">By clicking on the button, I agree to the processing of <a
+						href="https://app.bimpsoft.com/agreement.pdf" target="_blank">personal data</a></div>
+			</form>
+			<button class="modal__close" data-modal-close>
+				@include('../../img/close-icon.svg')
+			</button>
+		</div>
+	</div>
+</div>
+<div class="modal modal-thanks" id="modal-thanks" aria-hidden="true">
+	<div class="modal__wrapper">
+		<div class="modal__inner">
+			<div class="modal-thanks__content">
+				<div class="modal__icon">
+					<img src="img/thanks-icon.svg" width="75" height="75" alt="">
+				</div>
+				<h3 class="modal__title">Thank&nbsp;you! Your&nbsp;application has been successfully submitted.</h3>
+				<h5 class="modal-thanks__subtitle">Our manager will contact you <b>shortly</b></h5>
+				<div class="modal__text">Subscribe to our updates</div>
+				<a class="modal__btn btn-icon-primary" href="https://t.me/bimpsoft" target="_blank">Subscribe to Telegram</a>
+			</div>
+
+			<button class="modal__close" data-modal-close>
+				@include('../../img/close-icon.svg')
+			</button>
+		</div>
+	</div>
+</div>

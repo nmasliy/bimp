@@ -2,7 +2,7 @@ import { initTabsFade, initTabsSimple } from "../functions/tabs";
 import { throttle } from "../functions/throttle";
 
 init();
-initTabsFade('.work__tab', '.work__tabs-content');
+initTabsFade('.work__tab', '.work__tabs-content', false, false);
 initTabsFade('.team__item', '.team__box');
 initTabsFade('.about__tabs li', '.about__item', false, true, 1024);
 initTabsSimple('.plans__radio', '.plans__price');

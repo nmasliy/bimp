@@ -1,0 +1,59 @@
+<header class="header">
+  <div class="container-lg">
+    <div class="header__inner">
+      <div class="header__left">
+        <a class="header__logo" href="./index-en.html" title="logo">
+          <picture class="header__logo-img">
+            <source srcset="img/logo.webp 1x, img/logo@2x.webp 2x" type="image/webp">
+            <img src="img/logo.png" srcset="img/logo.png 1x, img/logo@2x.png 2x" width="78" height="41"
+              alt="Bimp's logo">
+          </picture>
+          <span class="header__logo-text">Management accounting system</span>
+        </a>
+      </div>
+      <nav class="header__nav">
+        @include('nav.html')
+      </nav>
+      <div class="header__right">
+        <div class="header__languages">
+          <div class="header__languages-current">EN</div>
+          <ul>
+            <li><a href="./">UA</a></li>
+            <li class="is-active"><a href="./index-en.html">EN</a></li>
+          </ul>
+        </div>
+        <div class="burger"><span class="burger__inner"><span class="burger__line"></span></span></div>
+        <a class="header__btn header__btn--1 btn-orange btn-orange--sm" data-modal-open="modal-form" href="#"
+          target="_blank">Custom
+          implementation</a>
+        <a class="header__btn header__btn--2 btn-outline btn-outline--white btn-outline--sm"
+          href="https://app.bimpsoft.com/_/login" target="_blank">Sign up / Login</a>
+      </div>
+    </div>
+  </div>
+</header>
+<div class="burger-menu">
+  <div class="burger-menu__inner">
+    <nav class="burger-menu__nav">
+    </nav>
+    <div class="burger-menu__buttons"></div>
+    <ul class="burger-menu__socials">
+      <li>
+        <a href="https://www.facebook.com/Bimpsoft/" target="_blank">
+          @include('../../img/fb-icon.svg')
+        </a>
+      </li>
+      <li>
+        <a href="https://www.linkedin.com/company/86741067/" target="_blank">
+          @include('../../img/linkedin-icon.svg')
+        </a>
+      </li>
+      <li>
+        <a href="https://www.youtube.com/@bimp_soft" target="_blank">
+          @include('../../img/youtube-icon.svg')
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+<div class="overlay"></div>

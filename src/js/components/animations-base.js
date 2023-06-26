@@ -16,14 +16,18 @@ initBaseAnimations();
 
 function initBaseAnimations() {
 
-  animateItems('.problems__right', '.problems__list li');
-  animateItems('.support__info', '.support__list li');
+  // animateItems('.problems__right', '.problems__list li');
+  // animateItems('.support__info', '.support__list li');
 
   animatePulse('.problems', '.problems__items > div');
 
   animateIcons('.directions__list', '.directions__icon img');
 
 	animateCounters('.team', '.team__num');
+
+  if (ScrollTrigger.isTouch !== 1) {
+    animateBlocks('section:not(:first-child)');
+  }
 
 	function animateCounters(trigger, selector) {
 		const nums = document.querySelectorAll(selector);
@@ -91,6 +95,26 @@ function initBaseAnimations() {
         }
       );
       delay += 0.8;
+    }
+  }
+
+  function animateBlocks(selector) {
+    const itemNodes = document.querySelectorAll(selector);
+    
+    for(let i = 0; i < itemNodes.length; i++) {
+      gsap.from(
+        itemNodes[i],
+        {
+          opacity: 0,
+          y: 50,
+          duration: 0.6,
+          ease: "power2.inOut",
+          scrollTrigger: {
+            trigger: itemNodes[i],
+            start: '200px bottom',
+          },
+        }
+      );
     }
   }
 

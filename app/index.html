@@ -37,15 +37,16 @@
 </ul>
       </nav>
       <div class="header__right">
-        <!-- <div class="header__languages">
+        <div class="header__languages">
           <div class="header__languages-current">UA</div>
           <ul>
             <li class="is-active"><a href="./">UA</a></li>
-            <li><a href="./">EN</a></li>
+            <li><a href="./index-en.html">EN</a></li>
           </ul>
-        </div> -->
+        </div>
         <div class="burger"><span class="burger__inner"><span class="burger__line"></span></span></div>
-        <a class="header__btn header__btn--1 btn-orange btn-orange--sm" href="#" target="_blank">Впровадження
+        <a class="header__btn header__btn--1 btn-orange btn-orange--sm" data-modal-open="modal-form" href="#"
+          target="_blank">Впровадження
           під ключ</a>
         <a class="header__btn header__btn--2 btn-outline btn-outline--white btn-outline--sm"
           href="https://app.bimpsoft.com/_/login" target="_blank">Реєстрація / Вхід</a>
@@ -509,7 +510,126 @@
 		</div>
 	</div>
 </section>
-      
+      <section class="management" id="management">
+	<div class="container">
+		<h2 class="management__title title">Працюйте <span class="color-primary">точно і&nbsp;легко</span></h2>
+		<div class="management__inner">
+			<div class="management__items">
+				<div class="management__item is-active" data-tabs="1">
+					<h3 class="management__item-title">Управляйте фінансами <span class="color-primary">швидко та
+							якісно</span>
+						<div class="management__icon"></div>
+					</h3>
+					<div class="management__text">
+						<p>Аналізуйте точні фінансові показники
+							роботи&nbsp;компанії:</p>
+						<ul class="list">
+							<li>автоматично формуйте собівартість товарів та&nbsp;облік грошей за&nbsp;статтями доходів
+								і&nbsp;видатків,
+								контрагентами, кредитами, підзвітними особами, платіжним календарем;</li>
+							<li>генеруйте звіти по&nbsp;витратам, P&L, cash flow, отримані дивіденди, заборгованість, залишок коштів
+								та&nbsp;зарплату;</li>
+							<li>використовуйте інтеграції з&nbsp;потрібними платіжними системами.</li>
+						</ul>
+					</div>
+				</div>
+				<div class="management__item" data-tabs="2">
+					<h3 class="management__item-title">Володійте <span class="color-primary">точною інформацією</span>
+						по&nbsp;складу <div class="management__icon"></div>
+					</h3>
+					<div class="management__text">
+						<p>Створюйте та&nbsp;контролюйте склади та&nbsp;торгові точки вашої компанії у&nbsp;будь-який час:</p>
+						<ul class="list">
+							<li>отримуйте автоматичний розрахунок собівартості;</li>
+							<li>списуйте залишки у&nbsp;процесі продажу та&nbsp;виробництва;</li>
+							<li>відстежуйте наявність товару;</li>
+							<li>будьте вчасно попередженими про&nbsp;невеликі залишки.</li>
+						</ul>
+					</div>
+				</div>
+				<div class="management__item" data-tabs="3">
+					<h3 class="management__item-title">Отримуйте зрозумілу <span class="color-primary">та&nbsp;коректну
+							аналітику</span>
+						<div class="management__icon"></div>
+					</h3>
+					<div class="management__text">
+						<p>Заощаджуйте свій час, формуючи звіти в декілька кліків:</p>
+						<ul class="list">
+							<li>формуйте точні загальні звіти за&nbsp;місяць, квартал, рік по&nbsp;кожному з&nbsp;напрямків;</li>
+							<li>відстежуйте точки фінансового зростання та&nbsp;падіння показників;</li>
+							<li>прогнозуйте доходи та&nbsp;витрати в&nbsp;компанії.</li>
+						</ul>
+					</div>
+				</div>
+				<div class="management__item" data-tabs="4">
+					<h3 class="management__item-title">Контролюйте <span class="color-primary">собівартість</span>
+						виробництва</span>
+						<div class="management__icon"></div>
+					</h3>
+					<div class="management__text">
+						<p>Впорядкуйте виробничий цикл та&nbsp;керуйте операціями ефективніше:</p>
+						<ul class="list">
+							<li>контролюйте виробничі витрати та&nbsp;їх&nbsp;відхилення;</li>
+							<li>швидко визначайте основні причини відхилень у витратах;</li>
+							<li>будьте заздалегідь повідомлені про&nbsp;закінчення сировини на&nbsp;складі.</li>
+						</ul>
+					</div>
+				</div>
+				<div class="management__item" data-tabs="5">
+					<h3 class="management__item-title">Відстежуйте реальні <span class="color-primary">фінансові
+							результати</span>
+						<div class="management__icon"></div>
+					</h3>
+					<div class="management__text">
+						<p>Примножуйте ресурси та&nbsp;збільшуйте фінансові результати компанії:</p>
+						<ul class="list">
+							<li>слідкуйте за&nbsp;ключовими показниками, що&nbsp;впливають на&nbsp;збільшення прибутку;</li>
+							<li>відстежуйте ключові показники, які&nbsp;попереджають про&nbsp;низьку собівартість;</li>
+							<li>відслідковуйте точки зростання та&nbsp;падіння усіх фінансових показників.</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="management__images">
+				<div class="management__img is-active" data-tabs="1">
+					<picture>
+						<source srcset="img/management.webp 1x, img/management@2x.webp 2x" type="image/webp">
+						<img loading="lazy" src="img/management.png" srcset="img/management.png 1x, img/management@2x.png 2x"
+							width="530" height="576" alt="Bimp на смартфонах">
+					</picture>
+				</div>
+				<div class="management__img" data-tabs="2">
+					<picture>
+						<source srcset="img/management-2.webp 1x, img/management-2@2x.webp 2x" type="image/webp">
+						<img loading="lazy" src="img/management-2.png" srcset="img/management-2.png 1x, img/management-2@2x.png 2x"
+							width="530" height="576" alt="Bimp на смартфонах">
+					</picture>
+				</div>
+				<div class="management__img" data-tabs="3">
+					<picture>
+						<source srcset="img/management-3.webp 1x, img/management-3@2x.webp 2x" type="image/webp">
+						<img loading="lazy" src="img/management-3.png" srcset="img/management-3.png 1x, img/management-3@2x.png 2x"
+							width="530" height="576" alt="Bimp на смартфонах">
+					</picture>
+				</div>
+				<div class="management__img" data-tabs="4">
+					<picture>
+						<source srcset="img/management-4.webp 1x, img/management-4@2x.webp 2x" type="image/webp">
+						<img loading="lazy" src="img/management-4.png" srcset="img/management-4.png 1x, img/management-4@2x.png 2x"
+							width="530" height="576" alt="Bimp на смартфонах">
+					</picture>
+				</div>
+				<div class="management__img" data-tabs="5">
+					<picture>
+						<source srcset="img/management-5.webp 1x, img/management-5@2x.webp 2x" type="image/webp">
+						<img loading="lazy" src="img/management-5.png" srcset="img/management-5.png 1x, img/management-5@2x.png 2x"
+							width="530" height="576" alt="Bimp на смартфонах">
+					</picture>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
       <section class="problems section-offset-b" id="problems">
 	<div class="problems__section-wrapper">
 		<div class="container-lg">
@@ -1999,53 +2119,9 @@
 						<span>Номер телефону</span>
 						<input type="tel" name="Телефон" class="form__input form__input--tel">
 					</label>
+					<input type="hidden" name="Язык" value="ua">
 					<input class="input-price" type="hidden" name="Тариф" value="-">
 					<input class="input-request" type="hidden" name="Заявка" value="Залиште заявку">
-				</div>
-				<button class="form__btn btn-primary">Надіслати заявку</button>
-				<div class="form__caption">Натискаючи на кнопку, я погоджуюся на обробку <a
-						href="https://app.bimpsoft.com/agreement.pdf" target="_blank">персональних
-						даних</a></div>
-			</form>
-			<button class="modal__close" data-modal-close>
-				<svg width="16" height="18" viewBox="0 0 16 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M15.7656 16.2286C15.8399 16.3064 15.8988 16.3987 15.9391 16.5003C15.9793 16.6018 16 16.7107 16 16.8207C16 16.9306 15.9793 17.0395 15.9391 17.1411C15.8988 17.2427 15.8399 17.335 15.7656 17.4127C15.6912 17.4905 15.603 17.5521 15.5059 17.5942C15.4088 17.6363 15.3047 17.6579 15.1996 17.6579C15.0945 17.6579 14.9904 17.6363 14.8933 17.5942C14.7962 17.5521 14.708 17.4905 14.6336 17.4127L8 10.4725L1.36637 17.4127C1.21626 17.5697 1.01268 17.6579 0.8004 17.6579C0.588121 17.6579 0.384536 17.5697 0.234432 17.4127C0.0843276 17.2557 4.18453e-09 17.0427 0 16.8207C-4.18453e-09 16.5986 0.0843276 16.3856 0.234432 16.2286L6.86906 9.28942L0.234432 2.35021C0.0843276 2.19319 0 1.98023 0 1.75817C0 1.53611 0.0843276 1.32315 0.234432 1.16613C0.384536 1.00911 0.588121 0.920898 0.8004 0.920898C1.01268 0.920898 1.21626 1.00911 1.36637 1.16613L8 8.10639L14.6336 1.16613C14.7837 1.00911 14.9873 0.920898 15.1996 0.920898C15.4119 0.920898 15.6155 1.00911 15.7656 1.16613C15.9157 1.32315 16 1.53611 16 1.75817C16 1.98023 15.9157 2.19319 15.7656 2.35021L9.13094 9.28942L15.7656 16.2286Z" fill="#070414"/>
-</svg>
-
-			</button>
-		</div>
-	</div>
-</div>
-<div class="modal modal-form modal-demo" id="modal-demo" aria-hidden="true">
-	<div class="modal__wrapper">
-		<div class="modal__inner modal-demo__inner">
-			<form class="modal-form__element form modal-demo__form" method="post">
-				<h3 class="modal__title">Безкоштовна демонстрація</h3>
-				<div class="modal-demo__caption">
-					<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-						<path
-							d="M12.5 4C11.3838 4 10.2785 4.21986 9.24719 4.64702C8.21592 5.07419 7.27889 5.70029 6.48959 6.48959C4.89553 8.08365 4 10.2457 4 12.5C4 14.7543 4.89553 16.9163 6.48959 18.5104C7.27889 19.2997 8.21592 19.9258 9.24719 20.353C10.2785 20.7801 11.3838 21 12.5 21C14.7543 21 16.9163 20.1045 18.5104 18.5104C20.1045 16.9163 21 14.7543 21 12.5C21 11.3838 20.7801 10.2785 20.353 9.24719C19.9258 8.21592 19.2997 7.27889 18.5104 6.48959C17.7211 5.70029 16.7841 5.07419 15.7528 4.64702C14.7215 4.21986 13.6162 4 12.5 4ZM16.07 16.07L11.65 13.35V8.25H12.925V12.67L16.75 14.965L16.07 16.07Z"
-							fill="#2936A3" />
-					</svg>
-					<span>15-20 хв у Zoom чи Google meet</span>
-				</div>
-				<h5 class="modal-demo__subtitle">Експерт покаже можливості BIMP і&nbsp;розповість,
-					як&nbsp;ви&nbsp;зможете його використовувати
-					для&nbsp;покращення бізнесу.</h5>
-				<div class="form__items modal-demo__body">
-					<label class="form__item">
-						<span>Ваше ім’я</span>
-						<input type="text" name="Имя" class="form__input form__input--name">
-					</label>
-					<label class="form__item">
-						<span>Ваш e-mail</span>
-						<input type="text" name="Почта" class="form__input form__input--email">
-					</label>
-					<label class="form__item">
-						<span>Номер телефону</span>
-						<input type="tel" name="Телефон" class="form__input form__input--tel">
-					</label>
-					<input type="hidden" name="Заявка" value="Безкоштовна демонстрація">
 				</div>
 				<button class="form__btn btn-primary">Надіслати заявку</button>
 				<div class="form__caption">Натискаючи на кнопку, я погоджуюся на обробку <a

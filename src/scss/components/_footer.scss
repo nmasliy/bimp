@@ -34,7 +34,8 @@
 
   &__col {
     &:last-child {
-      padding-left: 45px;
+      // padding-left: 45px;
+      padding-left: 30px;
       min-width: 300px;
     }
   }
@@ -70,9 +71,10 @@
   &__list-caption {
     display: inline-block;
     margin-right: 12px;
-    width: 111px;
+    width: 130px;
     font-weight: 400;
     font-size: 14px;
+    white-space: nowrap;
     color: rgba(255, 255, 255, 80%);
   }
 
@@ -200,6 +202,10 @@
 
 @media screen and (max-width: 1200px) {
   .footer {
+    &__list-caption {
+      width: 120px;
+    }
+
     &__body,
     &__text,
     &__list-caption,
