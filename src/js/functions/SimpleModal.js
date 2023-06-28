@@ -48,7 +48,7 @@ class SimpleModal {
 
     modalNode.classList.add('is-open');
     if (this.options.disableScroll) {
-      this._disableScroll();
+      this._disableScroll(modalNode);
     }
 
     await waitFor(this.options.transitionDelay);
@@ -68,7 +68,7 @@ class SimpleModal {
     modalNode.classList.remove('is-open');
 
     if (this.options.disableScroll && this.activeModalNodes.length === 1) {
-      this._enableScroll();
+      this._enableScroll(modalNode);
     }
 
     await waitFor(this.options.transitionDelay);
@@ -118,14 +118,22 @@ class SimpleModal {
     document.body.addEventListener('click', initEvents);
   }
 
-  _enableScroll() {
+  _enableScroll(modalNode) {
     this.html.style.overflow = '';
     this.body.style.overflow = '';
+    
+    modalNode.style.paddingRight = '';
+    this.body.style.paddingRight = '';
   }
-
-  _disableScroll() {
+  
+  _disableScroll(modalNode) {
+    const scrollWidth = window.innerWidth - this.body.offsetWidth + 'px';
+    
     this.html.style.overflow = 'hidden';
     this.body.style.overflow = 'hidden';
+
+    modalNode.style.paddingRight = scrollWidth;
+    this.body.style.paddingRight = scrollWidth;
   }
 }
 
