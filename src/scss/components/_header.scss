@@ -19,6 +19,12 @@
 
     li {
       @include mr(25px);
+
+      &.is-active {
+        a::after {
+          width: 100%;
+        }
+      }
     }
 
     a {

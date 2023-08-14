@@ -1,0 +1,37 @@
+.star-rating {
+  display: flex;
+
+  &__caption {
+    position: absolute;
+    left: calc(100% + 10px);
+    top: calc(100% + 10px);
+    display: none;
+    border: 1px solid  rgba(7, 4, 20, 10%);
+    border-radius: 5px;
+    padding: 3px 8px;
+    width: max-content;
+    font-size: 11px;
+    color: $primary-color;
+    background: #fff;
+  }
+
+  &__icon {
+    position: relative;
+    margin-right: 1px;
+    width: 15px;
+    height: 15px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      background: url("../img/star-icon.svg") center / cover no-repeat;
+      inset: 0;
+    }
+  }
+
+  &__icon--fill {
+    &::before {
+      background-image: url("../img/star-icon-fill.svg");
+    }
+  }
+}

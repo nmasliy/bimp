@@ -1,0 +1,24 @@
+.preloader {
+  display: inline-block;
+  width: 43px;
+  height: 43px;
+  background: url("../img/preloader.svg") center / cover no-repeat;
+  animation: preloader 1.5s infinite linear;
+}
+
+@keyframes preloader {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .preloader {
+    width: 30px;
+    height: 30px;
+  }
+}

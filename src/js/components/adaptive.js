@@ -78,7 +78,12 @@ moveElementOnBreakpoint(
   { toSelector: '.footer__socials-wrapper', toPosition: 'afterbegin' },
   1024
 );
-
+moveElementOnBreakpoint(
+  '.article__author-info > p',
+  { fromSelector: '.article__author-name', fromPosition: 'afterend' },
+  { toSelector: '.article__author-wrapper', toPosition: 'beforeend' },
+  768
+);
 
 const teamItems = document.querySelectorAll('.team__item');
 

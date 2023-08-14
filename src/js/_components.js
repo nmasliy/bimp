@@ -1,3 +1,4 @@
+import './components/scroll';
 import './components/menu';
 import './components/modals';
 import './components/sliders';
@@ -12,3 +13,5 @@ import './components/adaptive';
 import './components/directions';
 import './components/plans';
 import './components/team';
+import './components/star-rating';
+import './components/youtube';

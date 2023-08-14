@@ -4,7 +4,7 @@ const requestInput = document.querySelector('.input-request');
 const planBtn = document.querySelector('.plans__btn[data-modal-open]');
 const inputPrice = document.querySelector('.input-price');
 
-planBtn.addEventListener('click', () => {
+planBtn?.addEventListener('click', () => {
   inputPrice.value = document.querySelector('input[name="plan"]:checked').value;
 })
 
@@ -67,10 +67,34 @@ const rules = [
   },
 ];
 
+const rulesNew = [
+  {
+    ruleSelector: '.form__input--email',
+    rules: [
+      {
+        rule: 'required',
+        value: true,
+        errorMessage: isPageEn ? "Please fill in your email!" : 'Заповніть Email!'
+      },
+      {
+        rule: 'email',
+        value: true,
+        errorMessage:  isPageEn ? "Please enter a valid email address!" : 'Заповніть коректно Email!'
+      },
+      {
+        rule: 'customRegexp',
+        value: /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
+        errorMessage:  isPageEn ? "Please enter a valid email address!" : 'Заповніть коректно Email!'
+      }
+    ]
+  },
+];
+
 
 const afterSend = () => {
 
 }
 
 validateForms('#modal-form .form', rules, afterSend);
+validateForms('.new__form', rulesNew, afterSend);
 

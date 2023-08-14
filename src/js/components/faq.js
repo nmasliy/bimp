@@ -1,9 +1,7 @@
-import scrollWithOffset from '../functions/scrollWithOffset';
-
 const btn = document.querySelector('.faq__btn');
 const items = document.querySelectorAll('.faq__item');
 
-btn.addEventListener('click', (e) => {
+btn?.addEventListener('click', (e) => {
 	btn.closest('.faq__inner').classList.add('is-expanded');
 })
 
@@ -13,11 +11,6 @@ items.forEach(item => {
 	if (item.classList.contains('is-active')) {
 		text.style.maxHeight = text.scrollHeight + 'px'; 
 	}
-
-	// if (window.innerWidth <= 1024) {
-	// 	item.classList.add('is-mobile');
-	// 	text.style.maxHeight = '';
-	// } 
 
 	item.addEventListener('click', () => {
 		const active = document.querySelector('.faq__item.is-active');
@@ -41,11 +34,6 @@ items.forEach(item => {
 		text.style.maxHeight = text.scrollHeight + 'px'; 
 
 		item.classList.add('is-active');
-
-		if (window.innerWidth <= 1024) {
-			// scrollWithOffset(item, 10);
-		}
-		
 
 	})
 })

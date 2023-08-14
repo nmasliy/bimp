@@ -56,7 +56,9 @@ export const validateForms = (selector, rules, afterSend) => {
   }
 
   validation.onSuccess((ev) => {
-    telSelector.value = telSelector.dataset.value;
+    if (telSelector) {
+      telSelector.value = telSelector.dataset.value;
+    }
 
     let formData = new FormData(ev.target);
 

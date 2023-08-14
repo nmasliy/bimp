@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="uk-UA">
+@include('html/head.html')
+
+<body>
+
+  <div class="page-wrapper">
+    @include('html/header.html')
+    <main class="main">
+      <div class="page-inner page-inner--offset">
+        <div class="page-inner__wrapper">
+          <div class="breadcrumbs">
+            <ul>
+              <li><a href="#">Головна</a></li>
+              <li><a href="#">Блог</a></li>
+              <li><a href="#">Управлінський облік в торгівлі: що це таке</a></li>
+            </ul>
+          </div>
+          <div class="sections-wrapper">
+            @include('html/blog/article.html')
+          </div>
+        </div>
+      </div>
+      @include('html/faq-offset.html')
+      <div class="blog-wrapper">
+        <div class="container-xs">
+          @include('html/blog/articles.html')
+        </div>
+      </div>
+      @include('html/new.html')
+    </main>
+    <div class="arrow-up" role="button"></div>
+    @include('html/footer.html')
+  </div>
+  @include('html/modals.html')
+
+  <script src="js/main.js"></script>
+
+</body>
+
+</html>

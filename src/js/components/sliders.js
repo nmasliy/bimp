@@ -14,6 +14,9 @@ function initMobileSlider(parent, wrapper, items, breakpoint = 1024, options) {
 
   function init() {
     const $parent = document.querySelector(parent);
+
+    if(!$parent) return;
+    
     const $wrapper = $parent.querySelector(wrapper);
     const $items = $wrapper.querySelectorAll(items);
 
@@ -68,6 +71,21 @@ initMobileSlider('.team__footer-wrapper', '.team__footer', '.team__col', 768, {
   spaceBetween: 8,
   slidesPerView: 'auto'
 });
+initMobileSlider('.articles__slider', '.blog-posts', '.articles__slider-item', 1024, {
+  spaceBetween: 30,
+  pagination: {
+    clickable: true,
+    el: '.swiper-pagination'
+  },
+  breakpoints: {
+    320: {
+      slidesPerView: 1,
+    },
+    480: {
+      slidesPerView: 'auto',
+    },
+  }
+})
 
 const aboutThumbs = initMobileSlider('.about__tabs-wrapper', '.about__tabs', '.about__tabs li', 1024, {
   slidesPerView: 'auto'
