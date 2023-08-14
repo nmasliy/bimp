@@ -1,712 +1,667 @@
 <!DOCTYPE html>
 <html lang="uk-UA">
-
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>Bimp - Система управлінського обліку</title>
-	<link rel="stylesheet" href="css/vendor.css">
-	<link rel="stylesheet" href="css/main.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Bimp - Система управлінського обліку</title>
+  <link rel="stylesheet" href="css/vendor.css">
+  <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
 
-	<div class="page-wrapper">
-		<header class="header">
+  <div class="page-wrapper">
+    <header class="header">
+  <div class="container-lg">
+    <div class="header__inner">
+      <div class="header__left">
+        <a class="header__logo" href="./" title="logo">
+          <picture class="header__logo-img">
+            <source srcset="img/logo.webp 1x, img/logo@2x.webp 2x" type="image/webp">
+            <img src="img/logo.png" srcset="img/logo.png 1x, img/logo@2x.png 2x" width="78" height="41"
+              alt="Логотип Bimp">
+          </picture>
+          <span class="header__logo-text">Система
+            управлінського обліку</span>
+        </a>
+      </div>
+      <nav class="header__nav">
+        <ul>
+	<!-- <li><a href="#management">Можливості</a></li> -->
+	<li><a href="#directions">Рішення</a></li>
+	<li><a href="#systems">Інтеграції</a></li>
+	<li><a href="#plans">Тарифи</a></li>
+	<li><a href="./blog.html">Блог</a></li>
+	<li><a href="#support">Підтримка</a></li>
+</ul>
+      </nav>
+      <div class="header__right">
+        <div class="header__languages">
+          <div class="header__languages-current">UA</div>
+          <ul>
+            <li class="is-active"><a href="./">UA</a></li>
+            <li><a href="./index-en.html">EN</a></li>
+          </ul>
+        </div>
+        <div class="burger"><span class="burger__inner"><span class="burger__line"></span></span></div>
+        <a class="header__btn header__btn--1 btn-orange btn-orange--sm" data-modal-open="modal-form" href="#"
+          target="_blank">Впровадження
+          під ключ</a>
+        <a class="header__btn header__btn--2 btn-outline btn-outline--white btn-outline--sm"
+          href="https://app.bimpsoft.com/_/login" target="_blank">Реєстрація / Вхід</a>
+      </div>
+    </div>
+  </div>
+</header>
+<div class="burger-menu">
+  <div class="burger-menu__inner">
+    <nav class="burger-menu__nav">
+    </nav>
+    <div class="burger-menu__buttons"></div>
+    <ul class="burger-menu__socials">
+      <li>
+        <a href="https://www.facebook.com/Bimpsoft/" target="_blank">
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_1163_5069)">
+<path d="M25.375 13.9997C25.3714 16.7798 24.3514 19.4626 22.507 21.5429C20.6627 23.6231 18.1213 24.9572 15.3617 25.2937C15.3002 25.3007 15.238 25.2945 15.1791 25.2757C15.1202 25.2568 15.066 25.2257 15.02 25.1844C14.974 25.143 14.9373 25.0924 14.9123 25.0359C14.8873 24.9793 14.8746 24.9181 14.875 24.8562V16.6247H17.5C17.6199 16.6249 17.7386 16.6005 17.8487 16.553C17.9589 16.5054 18.058 16.4357 18.1401 16.3482C18.2222 16.2607 18.2853 16.1573 18.3258 16.0444C18.3662 15.9314 18.3829 15.8114 18.375 15.6917C18.3556 15.4667 18.2518 15.2574 18.0844 15.1058C17.917 14.9542 17.6984 14.8716 17.4726 14.8747H14.875V12.2497C14.875 11.7855 15.0593 11.3404 15.3875 11.0122C15.7157 10.684 16.1608 10.4997 16.625 10.4997H18.375C18.4949 10.4999 18.6136 10.4755 18.7237 10.428C18.8339 10.3804 18.933 10.3107 19.0151 10.2232C19.0972 10.1357 19.1603 10.0323 19.2008 9.91937C19.2411 9.80643 19.2579 9.68639 19.25 9.5667C19.2306 9.34131 19.1265 9.13165 18.9586 8.98002C18.7907 8.82839 18.5716 8.74607 18.3454 8.74967H16.625C15.6967 8.74967 14.8065 9.11842 14.1501 9.77479C13.4937 10.4312 13.125 11.3214 13.125 12.2497V14.8747H10.4999C10.38 14.8744 10.2613 14.8988 10.1512 14.9464C10.041 14.9939 9.94186 15.0636 9.8598 15.1511C9.77774 15.2386 9.71455 15.342 9.67415 15.455C9.63375 15.5679 9.617 15.6879 9.62495 15.8076C9.6443 16.033 9.74842 16.2427 9.91629 16.3943C10.0842 16.5459 10.3033 16.6283 10.5295 16.6247H13.125V24.8584C13.1253 24.9202 13.1126 24.9813 13.0877 25.0378C13.0628 25.0942 13.0262 25.1448 12.9803 25.1861C12.9344 25.2274 12.8803 25.2586 12.8216 25.2775C12.7628 25.2964 12.7007 25.3027 12.6393 25.2959C9.80581 24.9508 7.2051 23.5546 5.35197 21.3834C3.49884 19.2123 2.52835 16.4246 2.63261 13.572C2.85136 7.66576 7.63542 2.8642 13.546 2.63451C15.0763 2.57524 16.6028 2.82521 18.0342 3.36947C19.4656 3.91374 20.7726 4.74111 21.8769 5.80212C22.9812 6.86312 23.8601 8.13595 24.4612 9.54447C25.0622 10.953 25.373 12.4683 25.375 13.9997Z" fill="white" fill-opacity="0.8"/>
+</g>
+<defs>
+<clipPath id="clip0_1163_5069">
+<rect width="28" height="28" fill="white"/>
+</clipPath>
+</defs>
+</svg>
+
+        </a>
+      </li>
+      <li>
+        <a href="https://www.linkedin.com/company/86741067/" target="_blank">
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_1320_5220)">
+<path d="M23.3077 3H4.69231C4.24348 3 3.81303 3.1783 3.49567 3.49567C3.1783 3.81303 3 4.24348 3 4.69231V23.3077C3 23.7565 3.1783 24.187 3.49567 24.5043C3.81303 24.8217 4.24348 25 4.69231 25H23.3077C23.7565 25 24.187 24.8217 24.5043 24.5043C24.8217 24.187 25 23.7565 25 23.3077V4.69231C25 4.24348 24.8217 3.81303 24.5043 3.49567C24.187 3.1783 23.7565 3 23.3077 3ZM10.6154 19.0769C10.6154 19.3013 10.5262 19.5166 10.3676 19.6752C10.2089 19.8339 9.99364 19.9231 9.76923 19.9231C9.54482 19.9231 9.32959 19.8339 9.17091 19.6752C9.01223 19.5166 8.92308 19.3013 8.92308 19.0769V12.3077C8.92308 12.0833 9.01223 11.8681 9.17091 11.7094C9.32959 11.5507 9.54482 11.4615 9.76923 11.4615C9.99364 11.4615 10.2089 11.5507 10.3676 11.7094C10.5262 11.8681 10.6154 12.0833 10.6154 12.3077V19.0769ZM9.76923 10.6154C9.5182 10.6154 9.27281 10.5409 9.06408 10.4015C8.85536 10.262 8.69268 10.0638 8.59661 9.83187C8.50055 9.59995 8.47541 9.34475 8.52439 9.09854C8.57336 8.85233 8.69424 8.62618 8.87175 8.44867C9.04925 8.27117 9.27541 8.15028 9.52162 8.10131C9.76782 8.05234 10.023 8.07747 10.2549 8.17354C10.4869 8.2696 10.6851 8.43228 10.8246 8.64101C10.964 8.84973 11.0385 9.09512 11.0385 9.34615C11.0385 9.68278 10.9047 10.0056 10.6667 10.2436C10.4287 10.4817 10.1059 10.6154 9.76923 10.6154ZM19.9231 19.0769C19.9231 19.3013 19.8339 19.5166 19.6752 19.6752C19.5166 19.8339 19.3013 19.9231 19.0769 19.9231C18.8525 19.9231 18.6373 19.8339 18.4786 19.6752C18.3199 19.5166 18.2308 19.3013 18.2308 19.0769V15.2692C18.2308 14.7082 18.0079 14.1701 17.6112 13.7734C17.2145 13.3767 16.6764 13.1538 16.1154 13.1538C15.5543 13.1538 15.0163 13.3767 14.6196 13.7734C14.2229 14.1701 14 14.7082 14 15.2692V19.0769C14 19.3013 13.9109 19.5166 13.7522 19.6752C13.5935 19.8339 13.3783 19.9231 13.1538 19.9231C12.9294 19.9231 12.7142 19.8339 12.5555 19.6752C12.3968 19.5166 12.3077 19.3013 12.3077 19.0769V12.3077C12.3087 12.1004 12.3858 11.9008 12.5243 11.7466C12.6628 11.5924 12.8531 11.4944 13.059 11.4712C13.265 11.4479 13.4723 11.5011 13.6417 11.6206C13.811 11.7401 13.9306 11.9176 13.9778 12.1194C14.5502 11.7311 15.2176 11.5061 15.9082 11.4684C16.5989 11.4308 17.2868 11.582 17.898 11.9058C18.5092 12.2297 19.0206 12.7138 19.3774 13.3064C19.7342 13.899 19.9228 14.5775 19.9231 15.2692V19.0769Z" fill="#CDCDD0"/>
+</g>
+<defs>
+<clipPath id="clip0_1320_5220">
+<rect width="28" height="28" fill="white"/>
+</clipPath>
+</defs>
+</svg>
+
+        </a>
+      </li>
+      <li>
+        <a href="https://www.youtube.com/@bimp_soft" target="_blank">
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_1320_5223)">
+<path d="M25.6298 7.60375C25.5268 7.20054 25.3293 6.82761 25.0538 6.51573C24.7782 6.20384 24.4324 5.96195 24.045 5.81C20.2956 4.36188 14.3281 4.375 14 4.375C13.6719 4.375 7.70437 4.36188 3.955 5.81C3.56755 5.96195 3.22179 6.20384 2.94623 6.51573C2.67067 6.82761 2.47322 7.20054 2.37016 7.60375C2.08688 8.69532 1.75 10.6903 1.75 14C1.75 17.3097 2.08688 19.3047 2.37016 20.3963C2.47306 20.7997 2.67045 21.1728 2.94601 21.4849C3.22158 21.797 3.56743 22.039 3.955 22.1911C7.54688 23.5769 13.1687 23.625 13.9278 23.625H14.0722C14.8313 23.625 20.4564 23.5769 24.045 22.1911C24.4326 22.039 24.7784 21.797 25.054 21.4849C25.3296 21.1728 25.5269 20.7997 25.6298 20.3963C25.9131 19.3025 26.25 17.3097 26.25 14C26.25 10.6903 25.9131 8.69532 25.6298 7.60375ZM17.7428 14.3642L12.4928 17.8642C12.4269 17.9082 12.3503 17.9334 12.2712 17.9373C12.192 17.9411 12.1134 17.9234 12.0435 17.886C11.9737 17.8486 11.9153 17.7929 11.8746 17.725C11.8339 17.657 11.8124 17.5792 11.8125 17.5V10.5C11.8124 10.4208 11.8339 10.343 11.8746 10.275C11.9153 10.2071 11.9737 10.1514 12.0435 10.114C12.1134 10.0766 12.192 10.0589 12.2712 10.0627C12.3503 10.0666 12.4269 10.0918 12.4928 10.1358L17.7428 13.6358C17.8028 13.6757 17.852 13.7299 17.8861 13.7934C17.9201 13.857 17.9379 13.9279 17.9379 14C17.9379 14.0721 17.9201 14.1431 17.8861 14.2066C17.852 14.2701 17.8028 14.3243 17.7428 14.3642Z" fill="#CDCDD0"/>
+</g>
+<defs>
+<clipPath id="clip0_1320_5223">
+<rect width="28" height="28" fill="white"/>
+</clipPath>
+</defs>
+</svg>
+
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+<div class="overlay"></div>
+    <main class="main">
+      <div class="page-inner">
+        <div class="page-inner__wrapper">
+          <div class="breadcrumbs">
+            <ul>
+              <li><a href="#">Головна</a></li>
+              <li><a href="#">Блог</a></li>
+            </ul>
+          </div>
+          <div class="sections-wrapper">
+            <div class="blog-header">
+	<ul class="blog-header__list">
+		<li><a href="#">Про ERP</a></li>
+		<li class="is-active"><a href="#">Облік в бізнесі</a></li>
+		<li><a href="#">Оновлення</a></li>
+		<li><a href="#">Кейси Bimp</a></li>
+	</ul>
+	<form class="blog-header__form" action="#">
+		<input class="blog-header__search" type="text" placeholder="Пошук">
+		<button class="blog-header__search-btn"></button>
+	</form>
+</div>
+<div class="blog-hero">
+	<div class="blog-hero__img">
+		<img src="img/blog-1.jpg" width="1920" height="474" alt="">
+	</div>
+	<div class="blog-hero__card article-card">
+		<div class="article-card__content">
+			<div class="article-card__category"># Облік в бізнесі</div>
+			<div class="article-card__rating">
+				<ul class="star-rating">
+					<li class="star-rating__icon star-rating__icon--fill"></li>
+					<li class="star-rating__icon star-rating__icon--fill"></li>
+					<li class="star-rating__icon star-rating__icon--fill"></li>
+					<li class="star-rating__icon star-rating__icon--fill"></li>
+					<li class="star-rating__icon"></li>
+				</ul>
+				<div class="article-card__rating-caption">Рейтинг 4/5 - 33 голоси</div>
+			</div>
+			<h5 class="article-card__title article-card__title--lg"><a href="#">Управлінський облік в торгівлі: <div
+						class="break"></div> що це
+					таке</a>
+			</h5>
+			<div class="article-card__text">
+				<p>Часто від підприємців отримую прохання пояснити, що таке управлінський облік простими словами. Дуже часто
+					бізнес-початківці можуть плутати поняття управлінського й бухгалтерського обліку...</p>
+			</div>
+			<div class="article-card__footer article-card__footer--flex">
+				<ul class="article-card__info">
+					<li><time>25.04.2023</time></li>
+					<li>4 хв на читання</li>
+				</ul>
+				<div class="article-card__link-wrapper">
+					<a class="article-card__link" href="#">Детальніше ></a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="blog-hero__decor"></div>
+</div>
+            <div class="blog-wrapper">
+              <div class="container-xs">
+                <ul class="blog-posts">
+	<li class="blog-posts__item"><article class="article-card">
+	<a class="article-card__img" href="#">
+		<img src="img/article-1.jpg" width="358" height="200" alt="">
+	</a>
+	<div class="article-card__content">
+		<div class="article-card__category"><a href="#"># Облік в бізнесі</a></div>
+		<div class="article-card__rating">
+			<ul class="star-rating">
+				<li class="star-rating__icon star-rating__icon--fill"></li>
+				<li class="star-rating__icon star-rating__icon--fill"></li>
+				<li class="star-rating__icon star-rating__icon--fill"></li>
+				<li class="star-rating__icon star-rating__icon--fill"></li>
+				<li class="star-rating__icon"></li>
+			</ul>
+			<div class="article-card__rating-caption">Рейтинг 4/5 - 33 голоси</div>
+		</div>
+		<h5 class="article-card__title"><a href="#">Управлінський облік в торгівлі: що це таке</a></h5>
+		<div class="article-card__text">
+			<p>Часто від підприємців отримую прохання пояснити, що таке управлінський облік простими словами. Дуже часто
+				бізнес-початківці можуть плутати поняття управлінського й бухгалтерського обліку...</p>
+		</div>
+		<div class="article-card__footer">
+			<ul class="article-card__info">
+				<li><time>25.04.2023</time></li>
+				<li>4 хв на читання</li>
+			</ul>
+			<div class="article-card__link-wrapper">
+				<a class="article-card__link" href="#">Детальніше ></a>
+			</div>
+		</div>
+	</div>
+</article></li>
+	<li class="blog-posts__item"><article class="article-card">
+	<a class="article-card__img" href="#">
+		<img src="img/article-1.jpg" width="358" height="200" alt="">
+	</a>
+	<div class="article-card__content">
+		<div class="article-card__category"><a href="#"># Облік в бізнесі</a></div>
+		<div class="article-card__rating">
+			<ul class="star-rating">
+				<li class="star-rating__icon star-rating__icon--fill"></li>
+				<li class="star-rating__icon star-rating__icon--fill"></li>
+				<li class="star-rating__icon star-rating__icon--fill"></li>
+				<li class="star-rating__icon star-rating__icon--fill"></li>
+				<li class="star-rating__icon"></li>
+			</ul>
+			<div class="article-card__rating-caption">Рейтинг 4/5 - 33 голоси</div>
+		</div>
+		<h5 class="article-card__title"><a href="#">Управлінський облік в торгівлі: що це таке</a></h5>
+		<div class="article-card__text">
+			<p>Часто від підприємців отримую прохання пояснити, що таке управлінський облік простими словами. Дуже часто
+				бізнес-початківці можуть плутати поняття управлінського й бухгалтерського обліку...</p>
+		</div>
+		<div class="article-card__footer">
+			<ul class="article-card__info">
+				<li><time>25.04.2023</time></li>
+				<li>4 хв на читання</li>
+			</ul>
+			<div class="article-card__link-wrapper">
+				<a class="article-card__link" href="#">Детальніше ></a>
+			</div>
+		</div>
+	</div>
+</article></li>
+	<li class="blog-posts__item"><article class="article-card">
+	<a class="article-card__img" href="#">
+		<img src="img/article-1.jpg" width="358" height="200" alt="">
+	</a>
+	<div class="article-card__content">
+		<div class="article-card__category"><a href="#"># Облік в бізнесі</a></div>
+		<div class="article-card__rating">
+			<ul class="star-rating">
+				<li class="star-rating__icon star-rating__icon--fill"></li>
+				<li class="star-rating__icon star-rating__icon--fill"></li>
+				<li class="star-rating__icon star-rating__icon--fill"></li>
+				<li class="star-rating__icon star-rating__icon--fill"></li>
+				<li class="star-rating__icon"></li>
+			</ul>
+			<div class="article-card__rating-caption">Рейтинг 4/5 - 33 голоси</div>
+		</div>
+		<h5 class="article-card__title"><a href="#">Управлінський облік в торгівлі: що це таке</a></h5>
+		<div class="article-card__text">
+			<p>Часто від підприємців отримую прохання пояснити, що таке управлінський облік простими словами. Дуже часто
+				бізнес-початківці можуть плутати поняття управлінського й бухгалтерського обліку...</p>
+		</div>
+		<div class="article-card__footer">
+			<ul class="article-card__info">
+				<li><time>25.04.2023</time></li>
+				<li>4 хв на читання</li>
+			</ul>
+			<div class="article-card__link-wrapper">
+				<a class="article-card__link" href="#">Детальніше ></a>
+			</div>
+		</div>
+	</div>
+</article></li>
+	<li class="blog-posts__item"><article class="article-card">
+	<a class="article-card__img" href="#">
+		<img src="img/article-1.jpg" width="358" height="200" alt="">
+	</a>
+	<div class="article-card__content">
+		<div class="article-card__category"><a href="#"># Облік в бізнесі</a></div>
+		<div class="article-card__rating">
+			<ul class="star-rating">
+				<li class="star-rating__icon star-rating__icon--fill"></li>
+				<li class="star-rating__icon star-rating__icon--fill"></li>
+				<li class="star-rating__icon star-rating__icon--fill"></li>
+				<li class="star-rating__icon star-rating__icon--fill"></li>
+				<li class="star-rating__icon"></li>
+			</ul>
+			<div class="article-card__rating-caption">Рейтинг 4/5 - 33 голоси</div>
+		</div>
+		<h5 class="article-card__title"><a href="#">Управлінський облік в торгівлі: що це таке</a></h5>
+		<div class="article-card__text">
+			<p>Часто від підприємців отримую прохання пояснити, що таке управлінський облік простими словами. Дуже часто
+				бізнес-початківці можуть плутати поняття управлінського й бухгалтерського обліку...</p>
+		</div>
+		<div class="article-card__footer">
+			<ul class="article-card__info">
+				<li><time>25.04.2023</time></li>
+				<li>4 хв на читання</li>
+			</ul>
+			<div class="article-card__link-wrapper">
+				<a class="article-card__link" href="#">Детальніше ></a>
+			</div>
+		</div>
+	</div>
+</article></li>
+	<li class="blog-posts__item"><article class="article-card">
+	<a class="article-card__img" href="#">
+		<img src="img/article-1.jpg" width="358" height="200" alt="">
+	</a>
+	<div class="article-card__content">
+		<div class="article-card__category"><a href="#"># Облік в бізнесі</a></div>
+		<div class="article-card__rating">
+			<ul class="star-rating">
+				<li class="star-rating__icon star-rating__icon--fill"></li>
+				<li class="star-rating__icon star-rating__icon--fill"></li>
+				<li class="star-rating__icon star-rating__icon--fill"></li>
+				<li class="star-rating__icon star-rating__icon--fill"></li>
+				<li class="star-rating__icon"></li>
+			</ul>
+			<div class="article-card__rating-caption">Рейтинг 4/5 - 33 голоси</div>
+		</div>
+		<h5 class="article-card__title"><a href="#">Управлінський облік в торгівлі: що це таке</a></h5>
+		<div class="article-card__text">
+			<p>Часто від підприємців отримую прохання пояснити, що таке управлінський облік простими словами. Дуже часто
+				бізнес-початківці можуть плутати поняття управлінського й бухгалтерського обліку...</p>
+		</div>
+		<div class="article-card__footer">
+			<ul class="article-card__info">
+				<li><time>25.04.2023</time></li>
+				<li>4 хв на читання</li>
+			</ul>
+			<div class="article-card__link-wrapper">
+				<a class="article-card__link" href="#">Детальніше ></a>
+			</div>
+		</div>
+	</div>
+</article></li>
+	<li class="blog-posts__item"><article class="article-card">
+	<a class="article-card__img" href="#">
+		<img src="img/article-1.jpg" width="358" height="200" alt="">
+	</a>
+	<div class="article-card__content">
+		<div class="article-card__category"><a href="#"># Облік в бізнесі</a></div>
+		<div class="article-card__rating">
+			<ul class="star-rating">
+				<li class="star-rating__icon star-rating__icon--fill"></li>
+				<li class="star-rating__icon star-rating__icon--fill"></li>
+				<li class="star-rating__icon star-rating__icon--fill"></li>
+				<li class="star-rating__icon star-rating__icon--fill"></li>
+				<li class="star-rating__icon"></li>
+			</ul>
+			<div class="article-card__rating-caption">Рейтинг 4/5 - 33 голоси</div>
+		</div>
+		<h5 class="article-card__title"><a href="#">Управлінський облік в торгівлі: що це таке</a></h5>
+		<div class="article-card__text">
+			<p>Часто від підприємців отримую прохання пояснити, що таке управлінський облік простими словами. Дуже часто
+				бізнес-початківці можуть плутати поняття управлінського й бухгалтерського обліку...</p>
+		</div>
+		<div class="article-card__footer">
+			<ul class="article-card__info">
+				<li><time>25.04.2023</time></li>
+				<li>4 хв на читання</li>
+			</ul>
+			<div class="article-card__link-wrapper">
+				<a class="article-card__link" href="#">Детальніше ></a>
+			</div>
+		</div>
+	</div>
+</article></li>
+	<li class="blog-posts__item"><article class="article-card">
+	<a class="article-card__img" href="#">
+		<img src="img/article-1.jpg" width="358" height="200" alt="">
+	</a>
+	<div class="article-card__content">
+		<div class="article-card__category"><a href="#"># Облік в бізнесі</a></div>
+		<div class="article-card__rating">
+			<ul class="star-rating">
+				<li class="star-rating__icon star-rating__icon--fill"></li>
+				<li class="star-rating__icon star-rating__icon--fill"></li>
+				<li class="star-rating__icon star-rating__icon--fill"></li>
+				<li class="star-rating__icon star-rating__icon--fill"></li>
+				<li class="star-rating__icon"></li>
+			</ul>
+			<div class="article-card__rating-caption">Рейтинг 4/5 - 33 голоси</div>
+		</div>
+		<h5 class="article-card__title"><a href="#">Управлінський облік в торгівлі: що це таке</a></h5>
+		<div class="article-card__text">
+			<p>Часто від підприємців отримую прохання пояснити, що таке управлінський облік простими словами. Дуже часто
+				бізнес-початківці можуть плутати поняття управлінського й бухгалтерського обліку...</p>
+		</div>
+		<div class="article-card__footer">
+			<ul class="article-card__info">
+				<li><time>25.04.2023</time></li>
+				<li>4 хв на читання</li>
+			</ul>
+			<div class="article-card__link-wrapper">
+				<a class="article-card__link" href="#">Детальніше ></a>
+			</div>
+		</div>
+	</div>
+</article></li>
+	<li class="blog-posts__item"><article class="article-card">
+	<a class="article-card__img" href="#">
+		<img src="img/article-1.jpg" width="358" height="200" alt="">
+	</a>
+	<div class="article-card__content">
+		<div class="article-card__category"><a href="#"># Облік в бізнесі</a></div>
+		<div class="article-card__rating">
+			<ul class="star-rating">
+				<li class="star-rating__icon star-rating__icon--fill"></li>
+				<li class="star-rating__icon star-rating__icon--fill"></li>
+				<li class="star-rating__icon star-rating__icon--fill"></li>
+				<li class="star-rating__icon star-rating__icon--fill"></li>
+				<li class="star-rating__icon"></li>
+			</ul>
+			<div class="article-card__rating-caption">Рейтинг 4/5 - 33 голоси</div>
+		</div>
+		<h5 class="article-card__title"><a href="#">Управлінський облік в торгівлі: що це таке</a></h5>
+		<div class="article-card__text">
+			<p>Часто від підприємців отримую прохання пояснити, що таке управлінський облік простими словами. Дуже часто
+				бізнес-початківці можуть плутати поняття управлінського й бухгалтерського обліку...</p>
+		</div>
+		<div class="article-card__footer">
+			<ul class="article-card__info">
+				<li><time>25.04.2023</time></li>
+				<li>4 хв на читання</li>
+			</ul>
+			<div class="article-card__link-wrapper">
+				<a class="article-card__link" href="#">Детальніше ></a>
+			</div>
+		</div>
+	</div>
+</article></li>
+	<li class="blog-posts__item"><article class="article-card">
+	<a class="article-card__img" href="#">
+		<img src="img/article-1.jpg" width="358" height="200" alt="">
+	</a>
+	<div class="article-card__content">
+		<div class="article-card__category"><a href="#"># Облік в бізнесі</a></div>
+		<div class="article-card__rating">
+			<ul class="star-rating">
+				<li class="star-rating__icon star-rating__icon--fill"></li>
+				<li class="star-rating__icon star-rating__icon--fill"></li>
+				<li class="star-rating__icon star-rating__icon--fill"></li>
+				<li class="star-rating__icon star-rating__icon--fill"></li>
+				<li class="star-rating__icon"></li>
+			</ul>
+			<div class="article-card__rating-caption">Рейтинг 4/5 - 33 голоси</div>
+		</div>
+		<h5 class="article-card__title"><a href="#">Управлінський облік в торгівлі: що це таке</a></h5>
+		<div class="article-card__text">
+			<p>Часто від підприємців отримую прохання пояснити, що таке управлінський облік простими словами. Дуже часто
+				бізнес-початківці можуть плутати поняття управлінського й бухгалтерського обліку...</p>
+		</div>
+		<div class="article-card__footer">
+			<ul class="article-card__info">
+				<li><time>25.04.2023</time></li>
+				<li>4 хв на читання</li>
+			</ul>
+			<div class="article-card__link-wrapper">
+				<a class="article-card__link" href="#">Детальніше ></a>
+			</div>
+		</div>
+	</div>
+</article></li>
+</ul>
+<div class="posts__navigation">
+	<span aria-current="page" class="page-numbers current">1</span>
+	<a class="page-numbers" href="#">2</a>
+	<span class="page-numbers" href="#">...</span>
+	<a class="page-numbers" href="#">24</a>
+	<a class="next page-numbers" href="#">Наступна ></a>
+</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </main>
+    <footer class="footer">
+	<div class="footer__wrapper">
+		<div class="footer__body">
 			<div class="container-lg">
-				<div class="header__inner">
-					<div class="header__left">
-						<a class="header__logo" href="./" title="logo">
-							<picture class="header__logo-img">
+				<div class="footer__body-inner">
+					<div class="footer__col footer__col--logo">
+						<a class="footer__logo" href="./" title="logo">
+							<picture class="footer__logo-img">
 								<source srcset="img/logo.webp 1x, img/logo@2x.webp 2x" type="image/webp">
-								<img src="img/logo.png" srcset="img/logo.png 1x, img/logo@2x.png 2x" width="78" height="41"
+								<img src="img/logo.png" srcset="img/logo.png 1x, img/logo@2x.png 2x" width="90" height="46"
 									alt="Логотип Bimp">
 							</picture>
-							<span class="header__logo-text">Система
+							<span class="footer__logo-text">Система
 								управлінського обліку</span>
 						</a>
+						<div class="footer__award">
+							<picture>
+								<source srcset="img/footer-award.webp 1x, img/footer-award@2x.webp 2x" type="image/webp">
+								<img loading="lazy" src="img/footer-award.png"
+									srcset="img/footer-award.png 1x, img/footer-award@2x.png 2x" width="181" height="59" alt="award">
+							</picture>
+						</div>
 					</div>
-					<nav class="header__nav">
-						<ul>
-							<!-- <li><a href="#management">Можливості</a></li> -->
-							<li><a href="#directions">Рішення</a></li>
-							<li><a href="#systems">Інтеграції</a></li>
-							<li><a href="#plans">Тарифи</a></li>
-							<li><a href="./blog.html">Блог</a></li>
-							<li><a href="#support">Підтримка</a></li>
-						</ul>
-					</nav>
-					<div class="header__right">
-						<div class="header__languages">
-							<div class="header__languages-current">UA</div>
+					<div class="footer__col">
+						<nav class="footer__nav">
 							<ul>
-								<li class="is-active"><a href="./">UA</a></li>
-								<li><a href="./index-en.html">EN</a></li>
-							</ul>
-						</div>
-						<div class="burger"><span class="burger__inner"><span class="burger__line"></span></span></div>
-						<a class="header__btn header__btn--1 btn-orange btn-orange--sm" data-modal-open="modal-form" href="#"
-							target="_blank">Впровадження
-							під ключ</a>
-						<a class="header__btn header__btn--2 btn-outline btn-outline--white btn-outline--sm"
-							href="https://app.bimpsoft.com/_/login" target="_blank">Реєстрація / Вхід</a>
+	<!-- <li><a href="#management">Можливості</a></li> -->
+	<li><a href="#directions">Рішення</a></li>
+	<li><a href="#systems">Інтеграції</a></li>
+	<li><a href="#plans">Тарифи</a></li>
+	<li><a href="./blog.html">Блог</a></li>
+	<li><a href="#support">Підтримка</a></li>
+</ul>
+						</nav>
 					</div>
-				</div>
-			</div>
-		</header>
-		<div class="burger-menu">
-			<div class="burger-menu__inner">
-				<nav class="burger-menu__nav">
-				</nav>
-				<div class="burger-menu__buttons"></div>
-				<ul class="burger-menu__socials">
-					<li>
-						<a href="https://www.facebook.com/Bimpsoft/" target="_blank">
-							<svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<g clip-path="url(#clip0_1163_5069)">
-									<path
-										d="M25.375 13.9997C25.3714 16.7798 24.3514 19.4626 22.507 21.5429C20.6627 23.6231 18.1213 24.9572 15.3617 25.2937C15.3002 25.3007 15.238 25.2945 15.1791 25.2757C15.1202 25.2568 15.066 25.2257 15.02 25.1844C14.974 25.143 14.9373 25.0924 14.9123 25.0359C14.8873 24.9793 14.8746 24.9181 14.875 24.8562V16.6247H17.5C17.6199 16.6249 17.7386 16.6005 17.8487 16.553C17.9589 16.5054 18.058 16.4357 18.1401 16.3482C18.2222 16.2607 18.2853 16.1573 18.3258 16.0444C18.3662 15.9314 18.3829 15.8114 18.375 15.6917C18.3556 15.4667 18.2518 15.2574 18.0844 15.1058C17.917 14.9542 17.6984 14.8716 17.4726 14.8747H14.875V12.2497C14.875 11.7855 15.0593 11.3404 15.3875 11.0122C15.7157 10.684 16.1608 10.4997 16.625 10.4997H18.375C18.4949 10.4999 18.6136 10.4755 18.7237 10.428C18.8339 10.3804 18.933 10.3107 19.0151 10.2232C19.0972 10.1357 19.1603 10.0323 19.2008 9.91937C19.2411 9.80643 19.2579 9.68639 19.25 9.5667C19.2306 9.34131 19.1265 9.13165 18.9586 8.98002C18.7907 8.82839 18.5716 8.74607 18.3454 8.74967H16.625C15.6967 8.74967 14.8065 9.11842 14.1501 9.77479C13.4937 10.4312 13.125 11.3214 13.125 12.2497V14.8747H10.4999C10.38 14.8744 10.2613 14.8988 10.1512 14.9464C10.041 14.9939 9.94186 15.0636 9.8598 15.1511C9.77774 15.2386 9.71455 15.342 9.67415 15.455C9.63375 15.5679 9.617 15.6879 9.62495 15.8076C9.6443 16.033 9.74842 16.2427 9.91629 16.3943C10.0842 16.5459 10.3033 16.6283 10.5295 16.6247H13.125V24.8584C13.1253 24.9202 13.1126 24.9813 13.0877 25.0378C13.0628 25.0942 13.0262 25.1448 12.9803 25.1861C12.9344 25.2274 12.8803 25.2586 12.8216 25.2775C12.7628 25.2964 12.7007 25.3027 12.6393 25.2959C9.80581 24.9508 7.2051 23.5546 5.35197 21.3834C3.49884 19.2123 2.52835 16.4246 2.63261 13.572C2.85136 7.66576 7.63542 2.8642 13.546 2.63451C15.0763 2.57524 16.6028 2.82521 18.0342 3.36947C19.4656 3.91374 20.7726 4.74111 21.8769 5.80212C22.9812 6.86312 23.8601 8.13595 24.4612 9.54447C25.0622 10.953 25.373 12.4683 25.375 13.9997Z"
-										fill="white" fill-opacity="0.8" />
-								</g>
-								<defs>
-									<clipPath id="clip0_1163_5069">
-										<rect width="28" height="28" fill="white" />
-									</clipPath>
-								</defs>
-							</svg>
-
-						</a>
-					</li>
-					<li>
-						<a href="https://www.linkedin.com/company/86741067/" target="_blank">
-							<svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<g clip-path="url(#clip0_1320_5220)">
-									<path
-										d="M23.3077 3H4.69231C4.24348 3 3.81303 3.1783 3.49567 3.49567C3.1783 3.81303 3 4.24348 3 4.69231V23.3077C3 23.7565 3.1783 24.187 3.49567 24.5043C3.81303 24.8217 4.24348 25 4.69231 25H23.3077C23.7565 25 24.187 24.8217 24.5043 24.5043C24.8217 24.187 25 23.7565 25 23.3077V4.69231C25 4.24348 24.8217 3.81303 24.5043 3.49567C24.187 3.1783 23.7565 3 23.3077 3ZM10.6154 19.0769C10.6154 19.3013 10.5262 19.5166 10.3676 19.6752C10.2089 19.8339 9.99364 19.9231 9.76923 19.9231C9.54482 19.9231 9.32959 19.8339 9.17091 19.6752C9.01223 19.5166 8.92308 19.3013 8.92308 19.0769V12.3077C8.92308 12.0833 9.01223 11.8681 9.17091 11.7094C9.32959 11.5507 9.54482 11.4615 9.76923 11.4615C9.99364 11.4615 10.2089 11.5507 10.3676 11.7094C10.5262 11.8681 10.6154 12.0833 10.6154 12.3077V19.0769ZM9.76923 10.6154C9.5182 10.6154 9.27281 10.5409 9.06408 10.4015C8.85536 10.262 8.69268 10.0638 8.59661 9.83187C8.50055 9.59995 8.47541 9.34475 8.52439 9.09854C8.57336 8.85233 8.69424 8.62618 8.87175 8.44867C9.04925 8.27117 9.27541 8.15028 9.52162 8.10131C9.76782 8.05234 10.023 8.07747 10.2549 8.17354C10.4869 8.2696 10.6851 8.43228 10.8246 8.64101C10.964 8.84973 11.0385 9.09512 11.0385 9.34615C11.0385 9.68278 10.9047 10.0056 10.6667 10.2436C10.4287 10.4817 10.1059 10.6154 9.76923 10.6154ZM19.9231 19.0769C19.9231 19.3013 19.8339 19.5166 19.6752 19.6752C19.5166 19.8339 19.3013 19.9231 19.0769 19.9231C18.8525 19.9231 18.6373 19.8339 18.4786 19.6752C18.3199 19.5166 18.2308 19.3013 18.2308 19.0769V15.2692C18.2308 14.7082 18.0079 14.1701 17.6112 13.7734C17.2145 13.3767 16.6764 13.1538 16.1154 13.1538C15.5543 13.1538 15.0163 13.3767 14.6196 13.7734C14.2229 14.1701 14 14.7082 14 15.2692V19.0769C14 19.3013 13.9109 19.5166 13.7522 19.6752C13.5935 19.8339 13.3783 19.9231 13.1538 19.9231C12.9294 19.9231 12.7142 19.8339 12.5555 19.6752C12.3968 19.5166 12.3077 19.3013 12.3077 19.0769V12.3077C12.3087 12.1004 12.3858 11.9008 12.5243 11.7466C12.6628 11.5924 12.8531 11.4944 13.059 11.4712C13.265 11.4479 13.4723 11.5011 13.6417 11.6206C13.811 11.7401 13.9306 11.9176 13.9778 12.1194C14.5502 11.7311 15.2176 11.5061 15.9082 11.4684C16.5989 11.4308 17.2868 11.582 17.898 11.9058C18.5092 12.2297 19.0206 12.7138 19.3774 13.3064C19.7342 13.899 19.9228 14.5775 19.9231 15.2692V19.0769Z"
-										fill="#CDCDD0" />
-								</g>
-								<defs>
-									<clipPath id="clip0_1320_5220">
-										<rect width="28" height="28" fill="white" />
-									</clipPath>
-								</defs>
-							</svg>
-
-						</a>
-					</li>
-					<li>
-						<a href="https://www.youtube.com/@bimp_soft" target="_blank">
-							<svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<g clip-path="url(#clip0_1320_5223)">
-									<path
-										d="M25.6298 7.60375C25.5268 7.20054 25.3293 6.82761 25.0538 6.51573C24.7782 6.20384 24.4324 5.96195 24.045 5.81C20.2956 4.36188 14.3281 4.375 14 4.375C13.6719 4.375 7.70437 4.36188 3.955 5.81C3.56755 5.96195 3.22179 6.20384 2.94623 6.51573C2.67067 6.82761 2.47322 7.20054 2.37016 7.60375C2.08688 8.69532 1.75 10.6903 1.75 14C1.75 17.3097 2.08688 19.3047 2.37016 20.3963C2.47306 20.7997 2.67045 21.1728 2.94601 21.4849C3.22158 21.797 3.56743 22.039 3.955 22.1911C7.54688 23.5769 13.1687 23.625 13.9278 23.625H14.0722C14.8313 23.625 20.4564 23.5769 24.045 22.1911C24.4326 22.039 24.7784 21.797 25.054 21.4849C25.3296 21.1728 25.5269 20.7997 25.6298 20.3963C25.9131 19.3025 26.25 17.3097 26.25 14C26.25 10.6903 25.9131 8.69532 25.6298 7.60375ZM17.7428 14.3642L12.4928 17.8642C12.4269 17.9082 12.3503 17.9334 12.2712 17.9373C12.192 17.9411 12.1134 17.9234 12.0435 17.886C11.9737 17.8486 11.9153 17.7929 11.8746 17.725C11.8339 17.657 11.8124 17.5792 11.8125 17.5V10.5C11.8124 10.4208 11.8339 10.343 11.8746 10.275C11.9153 10.2071 11.9737 10.1514 12.0435 10.114C12.1134 10.0766 12.192 10.0589 12.2712 10.0627C12.3503 10.0666 12.4269 10.0918 12.4928 10.1358L17.7428 13.6358C17.8028 13.6757 17.852 13.7299 17.8861 13.7934C17.9201 13.857 17.9379 13.9279 17.9379 14C17.9379 14.0721 17.9201 14.1431 17.8861 14.2066C17.852 14.2701 17.8028 14.3243 17.7428 14.3642Z"
-										fill="#CDCDD0" />
-								</g>
-								<defs>
-									<clipPath id="clip0_1320_5223">
-										<rect width="28" height="28" fill="white" />
-									</clipPath>
-								</defs>
-							</svg>
-
-						</a>
-					</li>
-				</ul>
-			</div>
-		</div>
-		<div class="overlay"></div>
-		<main class="main">
-			<div class="page-inner">
-				<div class="page-inner__wrapper">
-					<div class="breadcrumbs">
-						<ul>
-							<li><a href="#">Головна</a></li>
-							<li><a href="#">Блог</a></li>
+					<div class="footer__col">
+						<ul class="footer__list list">
+							<li><span class="footer__list-caption">Відділ турботи</span> <a class="footer__phone"
+									href="tel:+380735315495">+38 (073) 531 54 95</a></li>
+							<li><span class="footer__list-caption">Відділ продажу</span> <a class="footer__phone"
+									href="tel:+380735263530">+38 (073) 526 35 30</a></li>
+							<li>
+								<p>м. Київ, пр. Охтирський</p>
+								<p>БЦ FORUM, корпус 1H, поверх 1</p>
+							</li>
+							<li><a href="mailto:sales@bimpsoft.com">sales@bimpsoft.com</a></li>
 						</ul>
 					</div>
-					<div class="sections-wrapper">
-						<div class="blog-header">
-							<ul class="blog-header__list">
-								<li><a href="#">Про ERP</a></li>
-								<li class="is-active"><a href="#">Облік в бізнесі</a></li>
-								<li><a href="#">Оновлення</a></li>
-								<li><a href="#">Кейси Bimp</a></li>
+					<div class="footer__col">
+						<div class="footer__text">Будьте в курсі усіх оновлень</div>
+						<a class="footer__btn btn-icon" href="https://t.me/bimpsoft" target="_blank">
+							<span>Підписатися на Telegram</span>
+						</a>
+						<div class="footer__socials-wrapper">
+							<div class="footer__socials-caption">Ми у соц. мережах</div>
+							<ul class="footer__socials">
+								<li>
+									<a href="https://www.facebook.com/Bimpsoft/" target="_blank">
+										<svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_1163_5069)">
+<path d="M25.375 13.9997C25.3714 16.7798 24.3514 19.4626 22.507 21.5429C20.6627 23.6231 18.1213 24.9572 15.3617 25.2937C15.3002 25.3007 15.238 25.2945 15.1791 25.2757C15.1202 25.2568 15.066 25.2257 15.02 25.1844C14.974 25.143 14.9373 25.0924 14.9123 25.0359C14.8873 24.9793 14.8746 24.9181 14.875 24.8562V16.6247H17.5C17.6199 16.6249 17.7386 16.6005 17.8487 16.553C17.9589 16.5054 18.058 16.4357 18.1401 16.3482C18.2222 16.2607 18.2853 16.1573 18.3258 16.0444C18.3662 15.9314 18.3829 15.8114 18.375 15.6917C18.3556 15.4667 18.2518 15.2574 18.0844 15.1058C17.917 14.9542 17.6984 14.8716 17.4726 14.8747H14.875V12.2497C14.875 11.7855 15.0593 11.3404 15.3875 11.0122C15.7157 10.684 16.1608 10.4997 16.625 10.4997H18.375C18.4949 10.4999 18.6136 10.4755 18.7237 10.428C18.8339 10.3804 18.933 10.3107 19.0151 10.2232C19.0972 10.1357 19.1603 10.0323 19.2008 9.91937C19.2411 9.80643 19.2579 9.68639 19.25 9.5667C19.2306 9.34131 19.1265 9.13165 18.9586 8.98002C18.7907 8.82839 18.5716 8.74607 18.3454 8.74967H16.625C15.6967 8.74967 14.8065 9.11842 14.1501 9.77479C13.4937 10.4312 13.125 11.3214 13.125 12.2497V14.8747H10.4999C10.38 14.8744 10.2613 14.8988 10.1512 14.9464C10.041 14.9939 9.94186 15.0636 9.8598 15.1511C9.77774 15.2386 9.71455 15.342 9.67415 15.455C9.63375 15.5679 9.617 15.6879 9.62495 15.8076C9.6443 16.033 9.74842 16.2427 9.91629 16.3943C10.0842 16.5459 10.3033 16.6283 10.5295 16.6247H13.125V24.8584C13.1253 24.9202 13.1126 24.9813 13.0877 25.0378C13.0628 25.0942 13.0262 25.1448 12.9803 25.1861C12.9344 25.2274 12.8803 25.2586 12.8216 25.2775C12.7628 25.2964 12.7007 25.3027 12.6393 25.2959C9.80581 24.9508 7.2051 23.5546 5.35197 21.3834C3.49884 19.2123 2.52835 16.4246 2.63261 13.572C2.85136 7.66576 7.63542 2.8642 13.546 2.63451C15.0763 2.57524 16.6028 2.82521 18.0342 3.36947C19.4656 3.91374 20.7726 4.74111 21.8769 5.80212C22.9812 6.86312 23.8601 8.13595 24.4612 9.54447C25.0622 10.953 25.373 12.4683 25.375 13.9997Z" fill="white" fill-opacity="0.8"/>
+</g>
+<defs>
+<clipPath id="clip0_1163_5069">
+<rect width="28" height="28" fill="white"/>
+</clipPath>
+</defs>
+</svg>
+
+									</a>
+								</li>
+								<li>
+									<a href="https://www.linkedin.com/company/86741067/" target="_blank">
+										<svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_1320_5220)">
+<path d="M23.3077 3H4.69231C4.24348 3 3.81303 3.1783 3.49567 3.49567C3.1783 3.81303 3 4.24348 3 4.69231V23.3077C3 23.7565 3.1783 24.187 3.49567 24.5043C3.81303 24.8217 4.24348 25 4.69231 25H23.3077C23.7565 25 24.187 24.8217 24.5043 24.5043C24.8217 24.187 25 23.7565 25 23.3077V4.69231C25 4.24348 24.8217 3.81303 24.5043 3.49567C24.187 3.1783 23.7565 3 23.3077 3ZM10.6154 19.0769C10.6154 19.3013 10.5262 19.5166 10.3676 19.6752C10.2089 19.8339 9.99364 19.9231 9.76923 19.9231C9.54482 19.9231 9.32959 19.8339 9.17091 19.6752C9.01223 19.5166 8.92308 19.3013 8.92308 19.0769V12.3077C8.92308 12.0833 9.01223 11.8681 9.17091 11.7094C9.32959 11.5507 9.54482 11.4615 9.76923 11.4615C9.99364 11.4615 10.2089 11.5507 10.3676 11.7094C10.5262 11.8681 10.6154 12.0833 10.6154 12.3077V19.0769ZM9.76923 10.6154C9.5182 10.6154 9.27281 10.5409 9.06408 10.4015C8.85536 10.262 8.69268 10.0638 8.59661 9.83187C8.50055 9.59995 8.47541 9.34475 8.52439 9.09854C8.57336 8.85233 8.69424 8.62618 8.87175 8.44867C9.04925 8.27117 9.27541 8.15028 9.52162 8.10131C9.76782 8.05234 10.023 8.07747 10.2549 8.17354C10.4869 8.2696 10.6851 8.43228 10.8246 8.64101C10.964 8.84973 11.0385 9.09512 11.0385 9.34615C11.0385 9.68278 10.9047 10.0056 10.6667 10.2436C10.4287 10.4817 10.1059 10.6154 9.76923 10.6154ZM19.9231 19.0769C19.9231 19.3013 19.8339 19.5166 19.6752 19.6752C19.5166 19.8339 19.3013 19.9231 19.0769 19.9231C18.8525 19.9231 18.6373 19.8339 18.4786 19.6752C18.3199 19.5166 18.2308 19.3013 18.2308 19.0769V15.2692C18.2308 14.7082 18.0079 14.1701 17.6112 13.7734C17.2145 13.3767 16.6764 13.1538 16.1154 13.1538C15.5543 13.1538 15.0163 13.3767 14.6196 13.7734C14.2229 14.1701 14 14.7082 14 15.2692V19.0769C14 19.3013 13.9109 19.5166 13.7522 19.6752C13.5935 19.8339 13.3783 19.9231 13.1538 19.9231C12.9294 19.9231 12.7142 19.8339 12.5555 19.6752C12.3968 19.5166 12.3077 19.3013 12.3077 19.0769V12.3077C12.3087 12.1004 12.3858 11.9008 12.5243 11.7466C12.6628 11.5924 12.8531 11.4944 13.059 11.4712C13.265 11.4479 13.4723 11.5011 13.6417 11.6206C13.811 11.7401 13.9306 11.9176 13.9778 12.1194C14.5502 11.7311 15.2176 11.5061 15.9082 11.4684C16.5989 11.4308 17.2868 11.582 17.898 11.9058C18.5092 12.2297 19.0206 12.7138 19.3774 13.3064C19.7342 13.899 19.9228 14.5775 19.9231 15.2692V19.0769Z" fill="#CDCDD0"/>
+</g>
+<defs>
+<clipPath id="clip0_1320_5220">
+<rect width="28" height="28" fill="white"/>
+</clipPath>
+</defs>
+</svg>
+
+									</a>
+								</li>
+								<li>
+									<a href="https://www.youtube.com/@bimp_soft" target="_blank">
+										<svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_1320_5223)">
+<path d="M25.6298 7.60375C25.5268 7.20054 25.3293 6.82761 25.0538 6.51573C24.7782 6.20384 24.4324 5.96195 24.045 5.81C20.2956 4.36188 14.3281 4.375 14 4.375C13.6719 4.375 7.70437 4.36188 3.955 5.81C3.56755 5.96195 3.22179 6.20384 2.94623 6.51573C2.67067 6.82761 2.47322 7.20054 2.37016 7.60375C2.08688 8.69532 1.75 10.6903 1.75 14C1.75 17.3097 2.08688 19.3047 2.37016 20.3963C2.47306 20.7997 2.67045 21.1728 2.94601 21.4849C3.22158 21.797 3.56743 22.039 3.955 22.1911C7.54688 23.5769 13.1687 23.625 13.9278 23.625H14.0722C14.8313 23.625 20.4564 23.5769 24.045 22.1911C24.4326 22.039 24.7784 21.797 25.054 21.4849C25.3296 21.1728 25.5269 20.7997 25.6298 20.3963C25.9131 19.3025 26.25 17.3097 26.25 14C26.25 10.6903 25.9131 8.69532 25.6298 7.60375ZM17.7428 14.3642L12.4928 17.8642C12.4269 17.9082 12.3503 17.9334 12.2712 17.9373C12.192 17.9411 12.1134 17.9234 12.0435 17.886C11.9737 17.8486 11.9153 17.7929 11.8746 17.725C11.8339 17.657 11.8124 17.5792 11.8125 17.5V10.5C11.8124 10.4208 11.8339 10.343 11.8746 10.275C11.9153 10.2071 11.9737 10.1514 12.0435 10.114C12.1134 10.0766 12.192 10.0589 12.2712 10.0627C12.3503 10.0666 12.4269 10.0918 12.4928 10.1358L17.7428 13.6358C17.8028 13.6757 17.852 13.7299 17.8861 13.7934C17.9201 13.857 17.9379 13.9279 17.9379 14C17.9379 14.0721 17.9201 14.1431 17.8861 14.2066C17.852 14.2701 17.8028 14.3243 17.7428 14.3642Z" fill="#CDCDD0"/>
+</g>
+<defs>
+<clipPath id="clip0_1320_5223">
+<rect width="28" height="28" fill="white"/>
+</clipPath>
+</defs>
+</svg>
+
+									</a>
+								</li>
 							</ul>
-							<form class="blog-header__form" action="#">
-								<input class="blog-header__search" type="text" placeholder="Пошук">
-								<button class="blog-header__search-btn"></button>
-							</form>
-						</div>
-						<div class="blog-hero">
-							<div class="blog-hero__img">
-								<img src="img/blog-1.jpg" width="1920" height="474" alt="">
-							</div>
-							<div class="blog-hero__card article-card">
-								<div class="article-card__content">
-									<div class="article-card__category"># Облік в бізнесі</div>
-									<div class="article-card__rating">
-										<ul class="star-rating">
-											<li class="star-rating__icon star-rating__icon--fill"></li>
-											<li class="star-rating__icon star-rating__icon--fill"></li>
-											<li class="star-rating__icon star-rating__icon--fill"></li>
-											<li class="star-rating__icon star-rating__icon--fill"></li>
-											<li class="star-rating__icon"></li>
-										</ul>
-										<div class="article-card__rating-caption">Рейтинг 4/5 - 33 голоси</div>
-									</div>
-									<h5 class="article-card__title article-card__title--lg"><a href="#">Управлінський облік в торгівлі:
-											<div class="break"></div> що це
-											таке</a>
-									</h5>
-									<div class="article-card__text">
-										<p>Часто від підприємців отримую прохання пояснити, що таке управлінський облік простими словами.
-											Дуже часто
-											бізнес-початківці можуть плутати поняття управлінського й бухгалтерського обліку...</p>
-									</div>
-									<div class="article-card__footer article-card__footer--flex">
-										<ul class="article-card__info">
-											<li><time>25.04.2023</time></li>
-											<li>4 хв на читання</li>
-										</ul>
-										<div class="article-card__link-wrapper">
-											<a class="article-card__link" href="#">Детальніше ></a>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="blog-hero__decor"></div>
-						</div>
-						<div class="blog-wrapper">
-							<div class="container-xs">
-								<ul class="blog-posts">
-									<li class="blog-posts__item">
-										<article class="article-card">
-											<a class="article-card__img" href="#">
-												<img src="img/article-1.jpg" width="358" height="200" alt="">
-											</a>
-											<div class="article-card__content">
-												<div class="article-card__category"># Облік в бізнесі</div>
-												<div class="article-card__rating">
-													<ul class="star-rating">
-														<li class="star-rating__icon star-rating__icon--fill"></li>
-														<li class="star-rating__icon star-rating__icon--fill"></li>
-														<li class="star-rating__icon star-rating__icon--fill"></li>
-														<li class="star-rating__icon star-rating__icon--fill"></li>
-														<li class="star-rating__icon"></li>
-													</ul>
-													<div class="article-card__rating-caption">Рейтинг 4/5 - 33 голоси</div>
-												</div>
-												<h5 class="article-card__title"><a href="#">Управлінський облік в торгівлі: що це таке</a></h5>
-												<div class="article-card__text">
-													<p>Часто від підприємців отримую прохання пояснити, що таке управлінський облік простими
-														словами. Дуже часто
-														бізнес-початківці можуть плутати поняття управлінського й бухгалтерського обліку...</p>
-												</div>
-												<div class="article-card__footer">
-													<ul class="article-card__info">
-														<li><time>25.04.2023</time></li>
-														<li>4 хв на читання</li>
-													</ul>
-													<div class="article-card__link-wrapper">
-														<a class="article-card__link" href="#">Детальніше ></a>
-													</div>
-												</div>
-											</div>
-										</article>
-									</li>
-									<li class="blog-posts__item">
-										<article class="article-card">
-											<a class="article-card__img" href="#">
-												<img src="img/article-1.jpg" width="358" height="200" alt="">
-											</a>
-											<div class="article-card__content">
-												<div class="article-card__category"># Облік в бізнесі</div>
-												<div class="article-card__rating">
-													<ul class="star-rating">
-														<li class="star-rating__icon star-rating__icon--fill"></li>
-														<li class="star-rating__icon star-rating__icon--fill"></li>
-														<li class="star-rating__icon star-rating__icon--fill"></li>
-														<li class="star-rating__icon star-rating__icon--fill"></li>
-														<li class="star-rating__icon"></li>
-													</ul>
-													<div class="article-card__rating-caption">Рейтинг 4/5 - 33 голоси</div>
-												</div>
-												<h5 class="article-card__title"><a href="#">Управлінський облік в торгівлі: що це таке</a></h5>
-												<div class="article-card__text">
-													<p>Часто від підприємців отримую прохання пояснити, що таке управлінський облік простими
-														словами. Дуже часто
-														бізнес-початківці можуть плутати поняття управлінського й бухгалтерського обліку...</p>
-												</div>
-												<div class="article-card__footer">
-													<ul class="article-card__info">
-														<li><time>25.04.2023</time></li>
-														<li>4 хв на читання</li>
-													</ul>
-													<div class="article-card__link-wrapper">
-														<a class="article-card__link" href="#">Детальніше ></a>
-													</div>
-												</div>
-											</div>
-										</article>
-									</li>
-									<li class="blog-posts__item">
-										<article class="article-card">
-											<a class="article-card__img" href="#">
-												<img src="img/article-1.jpg" width="358" height="200" alt="">
-											</a>
-											<div class="article-card__content">
-												<div class="article-card__category"># Облік в бізнесі</div>
-												<div class="article-card__rating">
-													<ul class="star-rating">
-														<li class="star-rating__icon star-rating__icon--fill"></li>
-														<li class="star-rating__icon star-rating__icon--fill"></li>
-														<li class="star-rating__icon star-rating__icon--fill"></li>
-														<li class="star-rating__icon star-rating__icon--fill"></li>
-														<li class="star-rating__icon"></li>
-													</ul>
-													<div class="article-card__rating-caption">Рейтинг 4/5 - 33 голоси</div>
-												</div>
-												<h5 class="article-card__title"><a href="#">Управлінський облік в торгівлі: що це таке</a></h5>
-												<div class="article-card__text">
-													<p>Часто від підприємців отримую прохання пояснити, що таке управлінський облік простими
-														словами. Дуже часто
-														бізнес-початківці можуть плутати поняття управлінського й бухгалтерського обліку...</p>
-												</div>
-												<div class="article-card__footer">
-													<ul class="article-card__info">
-														<li><time>25.04.2023</time></li>
-														<li>4 хв на читання</li>
-													</ul>
-													<div class="article-card__link-wrapper">
-														<a class="article-card__link" href="#">Детальніше ></a>
-													</div>
-												</div>
-											</div>
-										</article>
-									</li>
-									<li class="blog-posts__item">
-										<article class="article-card">
-											<a class="article-card__img" href="#">
-												<img src="img/article-1.jpg" width="358" height="200" alt="">
-											</a>
-											<div class="article-card__content">
-												<div class="article-card__category"># Облік в бізнесі</div>
-												<div class="article-card__rating">
-													<ul class="star-rating">
-														<li class="star-rating__icon star-rating__icon--fill"></li>
-														<li class="star-rating__icon star-rating__icon--fill"></li>
-														<li class="star-rating__icon star-rating__icon--fill"></li>
-														<li class="star-rating__icon star-rating__icon--fill"></li>
-														<li class="star-rating__icon"></li>
-													</ul>
-													<div class="article-card__rating-caption">Рейтинг 4/5 - 33 голоси</div>
-												</div>
-												<h5 class="article-card__title"><a href="#">Управлінський облік в торгівлі: що це таке</a></h5>
-												<div class="article-card__text">
-													<p>Часто від підприємців отримую прохання пояснити, що таке управлінський облік простими
-														словами. Дуже часто
-														бізнес-початківці можуть плутати поняття управлінського й бухгалтерського обліку...</p>
-												</div>
-												<div class="article-card__footer">
-													<ul class="article-card__info">
-														<li><time>25.04.2023</time></li>
-														<li>4 хв на читання</li>
-													</ul>
-													<div class="article-card__link-wrapper">
-														<a class="article-card__link" href="#">Детальніше ></a>
-													</div>
-												</div>
-											</div>
-										</article>
-									</li>
-									<li class="blog-posts__item">
-										<article class="article-card">
-											<a class="article-card__img" href="#">
-												<img src="img/article-1.jpg" width="358" height="200" alt="">
-											</a>
-											<div class="article-card__content">
-												<div class="article-card__category"># Облік в бізнесі</div>
-												<div class="article-card__rating">
-													<ul class="star-rating">
-														<li class="star-rating__icon star-rating__icon--fill"></li>
-														<li class="star-rating__icon star-rating__icon--fill"></li>
-														<li class="star-rating__icon star-rating__icon--fill"></li>
-														<li class="star-rating__icon star-rating__icon--fill"></li>
-														<li class="star-rating__icon"></li>
-													</ul>
-													<div class="article-card__rating-caption">Рейтинг 4/5 - 33 голоси</div>
-												</div>
-												<h5 class="article-card__title"><a href="#">Управлінський облік в торгівлі: що це таке</a></h5>
-												<div class="article-card__text">
-													<p>Часто від підприємців отримую прохання пояснити, що таке управлінський облік простими
-														словами. Дуже часто
-														бізнес-початківці можуть плутати поняття управлінського й бухгалтерського обліку...</p>
-												</div>
-												<div class="article-card__footer">
-													<ul class="article-card__info">
-														<li><time>25.04.2023</time></li>
-														<li>4 хв на читання</li>
-													</ul>
-													<div class="article-card__link-wrapper">
-														<a class="article-card__link" href="#">Детальніше ></a>
-													</div>
-												</div>
-											</div>
-										</article>
-									</li>
-									<li class="blog-posts__item">
-										<article class="article-card">
-											<a class="article-card__img" href="#">
-												<img src="img/article-1.jpg" width="358" height="200" alt="">
-											</a>
-											<div class="article-card__content">
-												<div class="article-card__category"># Облік в бізнесі</div>
-												<div class="article-card__rating">
-													<ul class="star-rating">
-														<li class="star-rating__icon star-rating__icon--fill"></li>
-														<li class="star-rating__icon star-rating__icon--fill"></li>
-														<li class="star-rating__icon star-rating__icon--fill"></li>
-														<li class="star-rating__icon star-rating__icon--fill"></li>
-														<li class="star-rating__icon"></li>
-													</ul>
-													<div class="article-card__rating-caption">Рейтинг 4/5 - 33 голоси</div>
-												</div>
-												<h5 class="article-card__title"><a href="#">Управлінський облік в торгівлі: що це таке</a></h5>
-												<div class="article-card__text">
-													<p>Часто від підприємців отримую прохання пояснити, що таке управлінський облік простими
-														словами. Дуже часто
-														бізнес-початківці можуть плутати поняття управлінського й бухгалтерського обліку...</p>
-												</div>
-												<div class="article-card__footer">
-													<ul class="article-card__info">
-														<li><time>25.04.2023</time></li>
-														<li>4 хв на читання</li>
-													</ul>
-													<div class="article-card__link-wrapper">
-														<a class="article-card__link" href="#">Детальніше ></a>
-													</div>
-												</div>
-											</div>
-										</article>
-									</li>
-									<li class="blog-posts__item">
-										<article class="article-card">
-											<a class="article-card__img" href="#">
-												<img src="img/article-1.jpg" width="358" height="200" alt="">
-											</a>
-											<div class="article-card__content">
-												<div class="article-card__category"># Облік в бізнесі</div>
-												<div class="article-card__rating">
-													<ul class="star-rating">
-														<li class="star-rating__icon star-rating__icon--fill"></li>
-														<li class="star-rating__icon star-rating__icon--fill"></li>
-														<li class="star-rating__icon star-rating__icon--fill"></li>
-														<li class="star-rating__icon star-rating__icon--fill"></li>
-														<li class="star-rating__icon"></li>
-													</ul>
-													<div class="article-card__rating-caption">Рейтинг 4/5 - 33 голоси</div>
-												</div>
-												<h5 class="article-card__title"><a href="#">Управлінський облік в торгівлі: що це таке</a></h5>
-												<div class="article-card__text">
-													<p>Часто від підприємців отримую прохання пояснити, що таке управлінський облік простими
-														словами. Дуже часто
-														бізнес-початківці можуть плутати поняття управлінського й бухгалтерського обліку...</p>
-												</div>
-												<div class="article-card__footer">
-													<ul class="article-card__info">
-														<li><time>25.04.2023</time></li>
-														<li>4 хв на читання</li>
-													</ul>
-													<div class="article-card__link-wrapper">
-														<a class="article-card__link" href="#">Детальніше ></a>
-													</div>
-												</div>
-											</div>
-										</article>
-									</li>
-									<li class="blog-posts__item">
-										<article class="article-card">
-											<a class="article-card__img" href="#">
-												<img src="img/article-1.jpg" width="358" height="200" alt="">
-											</a>
-											<div class="article-card__content">
-												<div class="article-card__category"># Облік в бізнесі</div>
-												<div class="article-card__rating">
-													<ul class="star-rating">
-														<li class="star-rating__icon star-rating__icon--fill"></li>
-														<li class="star-rating__icon star-rating__icon--fill"></li>
-														<li class="star-rating__icon star-rating__icon--fill"></li>
-														<li class="star-rating__icon star-rating__icon--fill"></li>
-														<li class="star-rating__icon"></li>
-													</ul>
-													<div class="article-card__rating-caption">Рейтинг 4/5 - 33 голоси</div>
-												</div>
-												<h5 class="article-card__title"><a href="#">Управлінський облік в торгівлі: що це таке</a></h5>
-												<div class="article-card__text">
-													<p>Часто від підприємців отримую прохання пояснити, що таке управлінський облік простими
-														словами. Дуже часто
-														бізнес-початківці можуть плутати поняття управлінського й бухгалтерського обліку...</p>
-												</div>
-												<div class="article-card__footer">
-													<ul class="article-card__info">
-														<li><time>25.04.2023</time></li>
-														<li>4 хв на читання</li>
-													</ul>
-													<div class="article-card__link-wrapper">
-														<a class="article-card__link" href="#">Детальніше ></a>
-													</div>
-												</div>
-											</div>
-										</article>
-									</li>
-									<li class="blog-posts__item">
-										<article class="article-card">
-											<a class="article-card__img" href="#">
-												<img src="img/article-1.jpg" width="358" height="200" alt="">
-											</a>
-											<div class="article-card__content">
-												<div class="article-card__category"># Облік в бізнесі</div>
-												<div class="article-card__rating">
-													<ul class="star-rating">
-														<li class="star-rating__icon star-rating__icon--fill"></li>
-														<li class="star-rating__icon star-rating__icon--fill"></li>
-														<li class="star-rating__icon star-rating__icon--fill"></li>
-														<li class="star-rating__icon star-rating__icon--fill"></li>
-														<li class="star-rating__icon"></li>
-													</ul>
-													<div class="article-card__rating-caption">Рейтинг 4/5 - 33 голоси</div>
-												</div>
-												<h5 class="article-card__title"><a href="#">Управлінський облік в торгівлі: що це таке</a></h5>
-												<div class="article-card__text">
-													<p>Часто від підприємців отримую прохання пояснити, що таке управлінський облік простими
-														словами. Дуже часто
-														бізнес-початківці можуть плутати поняття управлінського й бухгалтерського обліку...</p>
-												</div>
-												<div class="article-card__footer">
-													<ul class="article-card__info">
-														<li><time>25.04.2023</time></li>
-														<li>4 хв на читання</li>
-													</ul>
-													<div class="article-card__link-wrapper">
-														<a class="article-card__link" href="#">Детальніше ></a>
-													</div>
-												</div>
-											</div>
-										</article>
-									</li>
-								</ul>
-								<div class="posts__navigation">
-									<span aria-current="page" class="page-numbers current">1</span>
-									<a class="page-numbers" href="#">2</a>
-									<span class="page-numbers" href="#">...</span>
-									<a class="page-numbers" href="#">24</a>
-									<a class="next page-numbers" href="#">Наступна ></a>
-								</div>
-							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-
-		</main>
-		<footer class="footer">
-			<div class="footer__wrapper">
-				<div class="footer__body">
-					<div class="container-lg">
-						<div class="footer__body-inner">
-							<div class="footer__col footer__col--logo">
-								<a class="footer__logo" href="./" title="logo">
-									<picture class="footer__logo-img">
-										<source srcset="img/logo.webp 1x, img/logo@2x.webp 2x" type="image/webp">
-										<img src="img/logo.png" srcset="img/logo.png 1x, img/logo@2x.png 2x" width="90" height="46"
-											alt="Логотип Bimp">
-									</picture>
-									<span class="footer__logo-text">Система
-										управлінського обліку</span>
-								</a>
-								<div class="footer__award">
-									<picture>
-										<source srcset="img/footer-award.webp 1x, img/footer-award@2x.webp 2x" type="image/webp">
-										<img loading="lazy" src="img/footer-award.png"
-											srcset="img/footer-award.png 1x, img/footer-award@2x.png 2x" width="181" height="59" alt="award">
-									</picture>
-								</div>
-							</div>
-							<div class="footer__col">
-								<nav class="footer__nav">
-									<ul>
-										<!-- <li><a href="#management">Можливості</a></li> -->
-										<li><a href="#directions">Рішення</a></li>
-										<li><a href="#systems">Інтеграції</a></li>
-										<li><a href="#plans">Тарифи</a></li>
-										<li><a href="./blog.html">Блог</a></li>
-										<li><a href="#support">Підтримка</a></li>
-									</ul>
-								</nav>
-							</div>
-							<div class="footer__col">
-								<ul class="footer__list list">
-									<li><span class="footer__list-caption">Відділ турботи</span> <a class="footer__phone"
-											href="tel:+380735315495">+38 (073) 531 54 95</a></li>
-									<li><span class="footer__list-caption">Відділ продажу</span> <a class="footer__phone"
-											href="tel:+380730530306">+38 (073) 053 03 06</a></li>
-									<li>
-										<p>м. Київ, пров. Охтирський 7</p>
-										<p>БЦ FORUM, корпус 4, поверх 3</p>
-									</li>
-									<li><a href="mailto:sales@bimpsoft.com">sales@bimpsoft.com</a></li>
-								</ul>
-							</div>
-							<div class="footer__col">
-								<div class="footer__text">Будьте в курсі усіх оновлень</div>
-								<a class="footer__btn btn-icon" href="https://t.me/bimpsoft" target="_blank">
-									<span>Підписатися на Telegram</span>
-								</a>
-								<div class="footer__socials-wrapper">
-									<div class="footer__socials-caption">Ми у соц. мережах</div>
-									<ul class="footer__socials">
-										<li>
-											<a href="https://www.facebook.com/Bimpsoft/" target="_blank">
-												<svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-													<g clip-path="url(#clip0_1163_5069)">
-														<path
-															d="M25.375 13.9997C25.3714 16.7798 24.3514 19.4626 22.507 21.5429C20.6627 23.6231 18.1213 24.9572 15.3617 25.2937C15.3002 25.3007 15.238 25.2945 15.1791 25.2757C15.1202 25.2568 15.066 25.2257 15.02 25.1844C14.974 25.143 14.9373 25.0924 14.9123 25.0359C14.8873 24.9793 14.8746 24.9181 14.875 24.8562V16.6247H17.5C17.6199 16.6249 17.7386 16.6005 17.8487 16.553C17.9589 16.5054 18.058 16.4357 18.1401 16.3482C18.2222 16.2607 18.2853 16.1573 18.3258 16.0444C18.3662 15.9314 18.3829 15.8114 18.375 15.6917C18.3556 15.4667 18.2518 15.2574 18.0844 15.1058C17.917 14.9542 17.6984 14.8716 17.4726 14.8747H14.875V12.2497C14.875 11.7855 15.0593 11.3404 15.3875 11.0122C15.7157 10.684 16.1608 10.4997 16.625 10.4997H18.375C18.4949 10.4999 18.6136 10.4755 18.7237 10.428C18.8339 10.3804 18.933 10.3107 19.0151 10.2232C19.0972 10.1357 19.1603 10.0323 19.2008 9.91937C19.2411 9.80643 19.2579 9.68639 19.25 9.5667C19.2306 9.34131 19.1265 9.13165 18.9586 8.98002C18.7907 8.82839 18.5716 8.74607 18.3454 8.74967H16.625C15.6967 8.74967 14.8065 9.11842 14.1501 9.77479C13.4937 10.4312 13.125 11.3214 13.125 12.2497V14.8747H10.4999C10.38 14.8744 10.2613 14.8988 10.1512 14.9464C10.041 14.9939 9.94186 15.0636 9.8598 15.1511C9.77774 15.2386 9.71455 15.342 9.67415 15.455C9.63375 15.5679 9.617 15.6879 9.62495 15.8076C9.6443 16.033 9.74842 16.2427 9.91629 16.3943C10.0842 16.5459 10.3033 16.6283 10.5295 16.6247H13.125V24.8584C13.1253 24.9202 13.1126 24.9813 13.0877 25.0378C13.0628 25.0942 13.0262 25.1448 12.9803 25.1861C12.9344 25.2274 12.8803 25.2586 12.8216 25.2775C12.7628 25.2964 12.7007 25.3027 12.6393 25.2959C9.80581 24.9508 7.2051 23.5546 5.35197 21.3834C3.49884 19.2123 2.52835 16.4246 2.63261 13.572C2.85136 7.66576 7.63542 2.8642 13.546 2.63451C15.0763 2.57524 16.6028 2.82521 18.0342 3.36947C19.4656 3.91374 20.7726 4.74111 21.8769 5.80212C22.9812 6.86312 23.8601 8.13595 24.4612 9.54447C25.0622 10.953 25.373 12.4683 25.375 13.9997Z"
-															fill="white" fill-opacity="0.8" />
-													</g>
-													<defs>
-														<clipPath id="clip0_1163_5069">
-															<rect width="28" height="28" fill="white" />
-														</clipPath>
-													</defs>
-												</svg>
-
-											</a>
-										</li>
-										<li>
-											<a href="https://www.linkedin.com/company/86741067/" target="_blank">
-												<svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-													<g clip-path="url(#clip0_1320_5220)">
-														<path
-															d="M23.3077 3H4.69231C4.24348 3 3.81303 3.1783 3.49567 3.49567C3.1783 3.81303 3 4.24348 3 4.69231V23.3077C3 23.7565 3.1783 24.187 3.49567 24.5043C3.81303 24.8217 4.24348 25 4.69231 25H23.3077C23.7565 25 24.187 24.8217 24.5043 24.5043C24.8217 24.187 25 23.7565 25 23.3077V4.69231C25 4.24348 24.8217 3.81303 24.5043 3.49567C24.187 3.1783 23.7565 3 23.3077 3ZM10.6154 19.0769C10.6154 19.3013 10.5262 19.5166 10.3676 19.6752C10.2089 19.8339 9.99364 19.9231 9.76923 19.9231C9.54482 19.9231 9.32959 19.8339 9.17091 19.6752C9.01223 19.5166 8.92308 19.3013 8.92308 19.0769V12.3077C8.92308 12.0833 9.01223 11.8681 9.17091 11.7094C9.32959 11.5507 9.54482 11.4615 9.76923 11.4615C9.99364 11.4615 10.2089 11.5507 10.3676 11.7094C10.5262 11.8681 10.6154 12.0833 10.6154 12.3077V19.0769ZM9.76923 10.6154C9.5182 10.6154 9.27281 10.5409 9.06408 10.4015C8.85536 10.262 8.69268 10.0638 8.59661 9.83187C8.50055 9.59995 8.47541 9.34475 8.52439 9.09854C8.57336 8.85233 8.69424 8.62618 8.87175 8.44867C9.04925 8.27117 9.27541 8.15028 9.52162 8.10131C9.76782 8.05234 10.023 8.07747 10.2549 8.17354C10.4869 8.2696 10.6851 8.43228 10.8246 8.64101C10.964 8.84973 11.0385 9.09512 11.0385 9.34615C11.0385 9.68278 10.9047 10.0056 10.6667 10.2436C10.4287 10.4817 10.1059 10.6154 9.76923 10.6154ZM19.9231 19.0769C19.9231 19.3013 19.8339 19.5166 19.6752 19.6752C19.5166 19.8339 19.3013 19.9231 19.0769 19.9231C18.8525 19.9231 18.6373 19.8339 18.4786 19.6752C18.3199 19.5166 18.2308 19.3013 18.2308 19.0769V15.2692C18.2308 14.7082 18.0079 14.1701 17.6112 13.7734C17.2145 13.3767 16.6764 13.1538 16.1154 13.1538C15.5543 13.1538 15.0163 13.3767 14.6196 13.7734C14.2229 14.1701 14 14.7082 14 15.2692V19.0769C14 19.3013 13.9109 19.5166 13.7522 19.6752C13.5935 19.8339 13.3783 19.9231 13.1538 19.9231C12.9294 19.9231 12.7142 19.8339 12.5555 19.6752C12.3968 19.5166 12.3077 19.3013 12.3077 19.0769V12.3077C12.3087 12.1004 12.3858 11.9008 12.5243 11.7466C12.6628 11.5924 12.8531 11.4944 13.059 11.4712C13.265 11.4479 13.4723 11.5011 13.6417 11.6206C13.811 11.7401 13.9306 11.9176 13.9778 12.1194C14.5502 11.7311 15.2176 11.5061 15.9082 11.4684C16.5989 11.4308 17.2868 11.582 17.898 11.9058C18.5092 12.2297 19.0206 12.7138 19.3774 13.3064C19.7342 13.899 19.9228 14.5775 19.9231 15.2692V19.0769Z"
-															fill="#CDCDD0" />
-													</g>
-													<defs>
-														<clipPath id="clip0_1320_5220">
-															<rect width="28" height="28" fill="white" />
-														</clipPath>
-													</defs>
-												</svg>
-
-											</a>
-										</li>
-										<li>
-											<a href="https://www.youtube.com/@bimp_soft" target="_blank">
-												<svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-													<g clip-path="url(#clip0_1320_5223)">
-														<path
-															d="M25.6298 7.60375C25.5268 7.20054 25.3293 6.82761 25.0538 6.51573C24.7782 6.20384 24.4324 5.96195 24.045 5.81C20.2956 4.36188 14.3281 4.375 14 4.375C13.6719 4.375 7.70437 4.36188 3.955 5.81C3.56755 5.96195 3.22179 6.20384 2.94623 6.51573C2.67067 6.82761 2.47322 7.20054 2.37016 7.60375C2.08688 8.69532 1.75 10.6903 1.75 14C1.75 17.3097 2.08688 19.3047 2.37016 20.3963C2.47306 20.7997 2.67045 21.1728 2.94601 21.4849C3.22158 21.797 3.56743 22.039 3.955 22.1911C7.54688 23.5769 13.1687 23.625 13.9278 23.625H14.0722C14.8313 23.625 20.4564 23.5769 24.045 22.1911C24.4326 22.039 24.7784 21.797 25.054 21.4849C25.3296 21.1728 25.5269 20.7997 25.6298 20.3963C25.9131 19.3025 26.25 17.3097 26.25 14C26.25 10.6903 25.9131 8.69532 25.6298 7.60375ZM17.7428 14.3642L12.4928 17.8642C12.4269 17.9082 12.3503 17.9334 12.2712 17.9373C12.192 17.9411 12.1134 17.9234 12.0435 17.886C11.9737 17.8486 11.9153 17.7929 11.8746 17.725C11.8339 17.657 11.8124 17.5792 11.8125 17.5V10.5C11.8124 10.4208 11.8339 10.343 11.8746 10.275C11.9153 10.2071 11.9737 10.1514 12.0435 10.114C12.1134 10.0766 12.192 10.0589 12.2712 10.0627C12.3503 10.0666 12.4269 10.0918 12.4928 10.1358L17.7428 13.6358C17.8028 13.6757 17.852 13.7299 17.8861 13.7934C17.9201 13.857 17.9379 13.9279 17.9379 14C17.9379 14.0721 17.9201 14.1431 17.8861 14.2066C17.852 14.2701 17.8028 14.3243 17.7428 14.3642Z"
-															fill="#CDCDD0" />
-													</g>
-													<defs>
-														<clipPath id="clip0_1320_5223">
-															<rect width="28" height="28" fill="white" />
-														</clipPath>
-													</defs>
-												</svg>
-
-											</a>
-										</li>
-									</ul>
-								</div>
-							</div>
-						</div>
+		</div>
+		<div class="footer__bottom">
+			<div class="container-lg">
+				<div class="footer__bottom-inner">
+					<div class="footer__col">© 2023 BIMP. All rights reserved.</div>
+					<div class="footer__col"><a href="https://app.bimpsoft.com/agreement.pdf" target="_blank">Правила
+							використання</a></div>
+					<div class="footer__col"><a href="https://app.bimpsoft.com/privacy.pdf" target="_blank">Політика
+							конфіденційності</a></div>
+					<div class="footer__col"><a href="#" target="_blank">Управління Cookies</a>
 					</div>
 				</div>
-				<div class="footer__bottom">
-					<div class="container-lg">
-						<div class="footer__bottom-inner">
-							<div class="footer__col">© 2023 BIMP. All rights reserved.</div>
-							<div class="footer__col"><a href="https://app.bimpsoft.com/agreement.pdf" target="_blank">Правила
-									використання</a></div>
-							<div class="footer__col"><a href="https://app.bimpsoft.com/privacy.pdf" target="_blank">Політика
-									конфіденційності</a></div>
-							<div class="footer__col"><a href="#" target="_blank">Управління Cookies</a>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</footer>
-	</div>
-	<div class="modal modal-form" id="modal-form" aria-hidden="true">
-		<div class="modal__wrapper">
-			<div class="modal__inner">
-				<form class="modal-form__element form" method="post">
-					<h3 class="modal__title">Залиште заявку</h3>
-					<h5 class="modal__subtitle">Заповніть форму для отримання консультації спеціаліста</h5>
-					<div class="form__items">
-						<label class="form__item">
-							<span>Ваше ім’я</span>
-							<input type="text" name="Имя" class="form__input form__input--name">
-						</label>
-						<label class="form__item">
-							<span>Ваш e-mail</span>
-							<input type="text" name="Почта" class="form__input form__input--email">
-						</label>
-						<label class="form__item">
-							<span>Номер телефону</span>
-							<input type="tel" name="Телефон" class="form__input form__input--tel">
-						</label>
-						<input type="hidden" name="Язык" value="ua">
-						<input class="input-price" type="hidden" name="Тариф" value="-">
-						<input class="input-request" type="hidden" name="Заявка" value="Залиште заявку">
-					</div>
-					<button class="form__btn btn-primary">Надіслати заявку</button>
-					<div class="form__caption">Натискаючи на кнопку, я погоджуюся на обробку <a
-							href="https://app.bimpsoft.com/agreement.pdf" target="_blank">персональних
-							даних</a></div>
-				</form>
-				<button class="modal__close" data-modal-close>
-					<svg width="16" height="18" viewBox="0 0 16 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-						<path
-							d="M15.7656 16.2286C15.8399 16.3064 15.8988 16.3987 15.9391 16.5003C15.9793 16.6018 16 16.7107 16 16.8207C16 16.9306 15.9793 17.0395 15.9391 17.1411C15.8988 17.2427 15.8399 17.335 15.7656 17.4127C15.6912 17.4905 15.603 17.5521 15.5059 17.5942C15.4088 17.6363 15.3047 17.6579 15.1996 17.6579C15.0945 17.6579 14.9904 17.6363 14.8933 17.5942C14.7962 17.5521 14.708 17.4905 14.6336 17.4127L8 10.4725L1.36637 17.4127C1.21626 17.5697 1.01268 17.6579 0.8004 17.6579C0.588121 17.6579 0.384536 17.5697 0.234432 17.4127C0.0843276 17.2557 4.18453e-09 17.0427 0 16.8207C-4.18453e-09 16.5986 0.0843276 16.3856 0.234432 16.2286L6.86906 9.28942L0.234432 2.35021C0.0843276 2.19319 0 1.98023 0 1.75817C0 1.53611 0.0843276 1.32315 0.234432 1.16613C0.384536 1.00911 0.588121 0.920898 0.8004 0.920898C1.01268 0.920898 1.21626 1.00911 1.36637 1.16613L8 8.10639L14.6336 1.16613C14.7837 1.00911 14.9873 0.920898 15.1996 0.920898C15.4119 0.920898 15.6155 1.00911 15.7656 1.16613C15.9157 1.32315 16 1.53611 16 1.75817C16 1.98023 15.9157 2.19319 15.7656 2.35021L9.13094 9.28942L15.7656 16.2286Z"
-							fill="#070414" />
-					</svg>
-
-				</button>
 			</div>
 		</div>
 	</div>
-	<div class="modal modal-thanks" id="modal-thanks" aria-hidden="true">
-		<div class="modal__wrapper">
-			<div class="modal__inner">
-				<div class="modal-thanks__content">
-					<div class="modal__icon">
-						<img src="img/thanks-icon.svg" width="75" height="75" alt="">
-					</div>
-					<h3 class="modal__title">Дякуємо! Заявка
-						успішно надіслана</h3>
-					<h5 class="modal-thanks__subtitle">Наш менеджер зв'яжеться з вами <b>найближчим часом</b></h5>
-					<div class="modal__text">Будь в курсі усіх оновлень</div>
-					<a class="modal__btn btn-icon-primary" href="https://t.me/bimpsoft" target="_blank">Підписатися на Telegram
-					</a>
+</footer>
+  </div>
+  <div class="modal modal-form" id="modal-form" aria-hidden="true">
+	<div class="modal__wrapper">
+		<div class="modal__inner">
+			<form class="modal-form__element form" method="post">
+				<h3 class="modal__title">Залиште заявку</h3>
+				<h5 class="modal__subtitle">Заповніть форму для отримання консультації спеціаліста</h5>
+				<div class="form__items">
+					<label class="form__item">
+						<span>Ваше ім’я</span>
+						<input type="text" name="Имя" class="form__input form__input--name">
+					</label>
+					<label class="form__item">
+						<span>Ваш e-mail</span>
+						<input type="text" name="Почта" class="form__input form__input--email">
+					</label>
+					<label class="form__item">
+						<span>Номер телефону</span>
+						<input type="tel" name="Телефон" class="form__input form__input--tel">
+					</label>
+					<input type="hidden" name="Язык" value="ua">
+					<input class="input-price" type="hidden" name="Тариф" value="-">
+					<input class="input-request" type="hidden" name="Заявка" value="Залиште заявку">
 				</div>
+				<button class="form__btn btn-primary">Надіслати заявку</button>
+				<div class="form__caption">Натискаючи на кнопку, я погоджуюся на обробку <a
+						href="https://app.bimpsoft.com/agreement.pdf" target="_blank">персональних
+						даних</a></div>
+			</form>
+			<button class="modal__close" data-modal-close>
+				<svg width="16" height="18" viewBox="0 0 16 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M15.7656 16.2286C15.8399 16.3064 15.8988 16.3987 15.9391 16.5003C15.9793 16.6018 16 16.7107 16 16.8207C16 16.9306 15.9793 17.0395 15.9391 17.1411C15.8988 17.2427 15.8399 17.335 15.7656 17.4127C15.6912 17.4905 15.603 17.5521 15.5059 17.5942C15.4088 17.6363 15.3047 17.6579 15.1996 17.6579C15.0945 17.6579 14.9904 17.6363 14.8933 17.5942C14.7962 17.5521 14.708 17.4905 14.6336 17.4127L8 10.4725L1.36637 17.4127C1.21626 17.5697 1.01268 17.6579 0.8004 17.6579C0.588121 17.6579 0.384536 17.5697 0.234432 17.4127C0.0843276 17.2557 4.18453e-09 17.0427 0 16.8207C-4.18453e-09 16.5986 0.0843276 16.3856 0.234432 16.2286L6.86906 9.28942L0.234432 2.35021C0.0843276 2.19319 0 1.98023 0 1.75817C0 1.53611 0.0843276 1.32315 0.234432 1.16613C0.384536 1.00911 0.588121 0.920898 0.8004 0.920898C1.01268 0.920898 1.21626 1.00911 1.36637 1.16613L8 8.10639L14.6336 1.16613C14.7837 1.00911 14.9873 0.920898 15.1996 0.920898C15.4119 0.920898 15.6155 1.00911 15.7656 1.16613C15.9157 1.32315 16 1.53611 16 1.75817C16 1.98023 15.9157 2.19319 15.7656 2.35021L9.13094 9.28942L15.7656 16.2286Z" fill="#070414"/>
+</svg>
 
-				<button class="modal__close" data-modal-close>
-					<svg width="16" height="18" viewBox="0 0 16 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-						<path
-							d="M15.7656 16.2286C15.8399 16.3064 15.8988 16.3987 15.9391 16.5003C15.9793 16.6018 16 16.7107 16 16.8207C16 16.9306 15.9793 17.0395 15.9391 17.1411C15.8988 17.2427 15.8399 17.335 15.7656 17.4127C15.6912 17.4905 15.603 17.5521 15.5059 17.5942C15.4088 17.6363 15.3047 17.6579 15.1996 17.6579C15.0945 17.6579 14.9904 17.6363 14.8933 17.5942C14.7962 17.5521 14.708 17.4905 14.6336 17.4127L8 10.4725L1.36637 17.4127C1.21626 17.5697 1.01268 17.6579 0.8004 17.6579C0.588121 17.6579 0.384536 17.5697 0.234432 17.4127C0.0843276 17.2557 4.18453e-09 17.0427 0 16.8207C-4.18453e-09 16.5986 0.0843276 16.3856 0.234432 16.2286L6.86906 9.28942L0.234432 2.35021C0.0843276 2.19319 0 1.98023 0 1.75817C0 1.53611 0.0843276 1.32315 0.234432 1.16613C0.384536 1.00911 0.588121 0.920898 0.8004 0.920898C1.01268 0.920898 1.21626 1.00911 1.36637 1.16613L8 8.10639L14.6336 1.16613C14.7837 1.00911 14.9873 0.920898 15.1996 0.920898C15.4119 0.920898 15.6155 1.00911 15.7656 1.16613C15.9157 1.32315 16 1.53611 16 1.75817C16 1.98023 15.9157 2.19319 15.7656 2.35021L9.13094 9.28942L15.7656 16.2286Z"
-							fill="#070414" />
-					</svg>
-
-				</button>
-			</div>
+			</button>
 		</div>
 	</div>
+</div>
+<div class="modal modal-thanks" id="modal-thanks" aria-hidden="true">
+	<div class="modal__wrapper">
+		<div class="modal__inner">
+			<div class="modal-thanks__content">
+				<div class="modal__icon">
+					<img src="img/thanks-icon.svg" width="75" height="75" alt="">
+				</div>
+				<h3 class="modal__title">Дякуємо! Заявка
+					успішно надіслана</h3>
+				<h5 class="modal-thanks__subtitle">Наш менеджер зв'яжеться з вами <b>найближчим часом</b></h5>
+				<div class="modal__text">Будь в курсі усіх оновлень</div>
+				<a class="modal__btn btn-icon-primary" href="https://t.me/bimpsoft" target="_blank">Підписатися на Telegram
+				</a>
+			</div>
 
-	<script src="js/main.js"></script>
+			<button class="modal__close" data-modal-close>
+				<svg width="16" height="18" viewBox="0 0 16 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M15.7656 16.2286C15.8399 16.3064 15.8988 16.3987 15.9391 16.5003C15.9793 16.6018 16 16.7107 16 16.8207C16 16.9306 15.9793 17.0395 15.9391 17.1411C15.8988 17.2427 15.8399 17.335 15.7656 17.4127C15.6912 17.4905 15.603 17.5521 15.5059 17.5942C15.4088 17.6363 15.3047 17.6579 15.1996 17.6579C15.0945 17.6579 14.9904 17.6363 14.8933 17.5942C14.7962 17.5521 14.708 17.4905 14.6336 17.4127L8 10.4725L1.36637 17.4127C1.21626 17.5697 1.01268 17.6579 0.8004 17.6579C0.588121 17.6579 0.384536 17.5697 0.234432 17.4127C0.0843276 17.2557 4.18453e-09 17.0427 0 16.8207C-4.18453e-09 16.5986 0.0843276 16.3856 0.234432 16.2286L6.86906 9.28942L0.234432 2.35021C0.0843276 2.19319 0 1.98023 0 1.75817C0 1.53611 0.0843276 1.32315 0.234432 1.16613C0.384536 1.00911 0.588121 0.920898 0.8004 0.920898C1.01268 0.920898 1.21626 1.00911 1.36637 1.16613L8 8.10639L14.6336 1.16613C14.7837 1.00911 14.9873 0.920898 15.1996 0.920898C15.4119 0.920898 15.6155 1.00911 15.7656 1.16613C15.9157 1.32315 16 1.53611 16 1.75817C16 1.98023 15.9157 2.19319 15.7656 2.35021L9.13094 9.28942L15.7656 16.2286Z" fill="#070414"/>
+</svg>
+
+			</button>
+		</div>
+	</div>
+</div>
+
+  <script src="js/main.js"></script>
 
 </body>
 

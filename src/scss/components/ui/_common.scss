@@ -43,6 +43,8 @@
 }
 
 .breadcrumbs {
+  position: relative;
+  z-index: 1;
   margin-bottom: 30px;
 
   li {
@@ -50,6 +52,7 @@
     margin-right: 11px;
     font-size: 12px;
     color: #999ebf;
+    transition: color $transition;
 
     a {
       position: relative;
@@ -65,6 +68,12 @@
         background: url("../img/chevron-right-icon.svg") center no-repeat;
         transform: translateY(-50%);
       }
+    }
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: #242f8a;
     }
 
     &:last-child {

@@ -1,5 +1,6 @@
 .article-hero {
   position: relative;
+  z-index: 1;
 
   &__img {
     position: relative;
@@ -49,7 +50,17 @@
     margin-bottom: 10px;
     font-weight: 600;
     font-size: 14px;
-    color: $primary-color;
+
+    a {
+      color: $primary-color;
+      transition: color $transition;
+
+      &:hover,
+      &:focus,
+      &:active {
+        color: #242f8a;
+      }
+    }
   }
 
   &__tags {
@@ -297,27 +308,26 @@
     position: relative;
 
     &::before {
-      @include bg-circle(444px);
-
-      left: -250px;
-      top: 0;
+      content: "";
+      position: absolute;
+      left: -25px;
+      right: -25px;
+      top: -800px;
+      bottom: -30px;
+      background: url("../img/article-decor-left.svg") top -100px left  no-repeat;
+      background-attachment: fixed;
     }
 
     &::after {
-      @include bg-circle(444px);
-
-      right: -150px;
-      top: -150px;
+      content: "";
+      position: absolute;
+      left: -25px;
+      right: -25px;
+      top: -800px;
+      bottom: -30px;
+      background: url("../img/article-decor-right.svg") top -100px right no-repeat;
+      background-attachment: fixed;
     }
-  }
-
-  &__decor {
-    @include bg-circle(400px);
-
-    right: -130px;
-    top: 135px;
-    background-color: #f64b15;
-    opacity: 0.1;
   }
 
   &__line {
@@ -421,7 +431,7 @@
   &__rating-caption {
     margin-right: 8px;
     font-size: 14px;
-    color: #304659;
+
 
     &--loading {
       display: flex;
@@ -471,10 +481,11 @@
   &__socials-caption {
     margin-right: 15px;
     font-size: 14px;
-    color: #304659;
   }
 
   &__bottom {
+    position: relative;
+    z-index: 1;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -496,7 +507,7 @@
       width: 40px;
       height: 40px;
       box-shadow: 0 1px 20px 0 rgba(0, 0, 0, 10%);
-      background: url("data:image/svg+xml,%3Csvg width='12' height='20' viewBox='0 0 12 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2.00293 2L10.0029 10L2.00293 18' stroke='%232936A3' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A") center no-repeat;
+      background: url("data:image/svg+xml,%3Csvg width='12' height='20' viewBox='0 0 12 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M2.00293 2L10.0029 10L2.00293 18' stroke='%232936A3' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A") center left 53% no-repeat;
       background-color: $white-color;
       transform: translateY(-50%) rotate(180deg);
       transition: background $transition;

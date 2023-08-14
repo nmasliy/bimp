@@ -7,15 +7,15 @@ const scroll = new SmoothScroll('a[href*="#"]', {
 });
 
 const arrowUp = document.querySelector('.arrow-up');
+const article = document.querySelector('.article');
 
 if (arrowUp) {
-  const article = document.querySelector('.article');
-  let offset = 200;
+  let offset = 700;
 
-  
   function update() {
-    const trigger = article ? article.offsetHeight + article.offsetTop - (window.innerHeight - offset)
-    : window.innerHeight;
+    const trigger = article
+      ? article.offsetHeight + article.offsetTop - (window.innerHeight + offset)
+      : window.innerHeight;
 
     if (window.pageYOffset >= trigger) {
       arrowUp.classList.add('is-active');
@@ -29,4 +29,12 @@ if (arrowUp) {
   });
 
   window.addEventListener('scroll', throttle(update));
+}
+
+if (article) {
+  function updateBg() {
+    
+  }
+
+  window.addEventListener('scroll', throttle(updateBg));
 }

@@ -9,7 +9,17 @@
 
   &__category {
     margin-bottom: 13px;
-    color: #2936a3;
+
+    a {
+      color: #2936a3;
+      transition: color $transition;
+
+      &:hover,
+      &:focus,
+      &:active {
+        color: #242f8a;
+      }
+    }
   }
 
   &__content {
@@ -122,6 +132,13 @@
     font-weight: 600;
     letter-spacing: 0.2px;
     color: #2936a3;
+    transition: color $transition;
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: #242f8a;
+    }
   }
 }
 
@@ -139,6 +156,7 @@
 
 .blog-header {
   position: relative;
+  z-index: 1;
   margin-bottom: 30px;
   border-bottom: 1px solid  rgba(7, 4, 20, 10%);
 
@@ -415,12 +433,15 @@
           padding: 12px 20px;
         }
 
+        &:focus,
+        &:active {
+          color: $primary-color;
+          background: #f1f3ff;
+        }
+
         &.is-active {
-          a {
-            border: none;
-            border-radius: 5px;
-            color: $primary-color;
-          }
+          color: $primary-color;
+          background: #f1f3ff;
         }
       }
     }
