@@ -348,7 +348,6 @@
   .blog-hero {
     &__img {
       position: relative;
-      margin-bottom: -145px;
       padding-bottom: 35%;
 
       img {
@@ -368,10 +367,6 @@
   }
 
   .blog-hero {
-    &__img {
-      margin-bottom: -50px;
-    }
-
     &__card {
       padding: 20px;
       max-width: 90%;
