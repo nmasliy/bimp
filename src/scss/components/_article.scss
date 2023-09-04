@@ -543,7 +543,6 @@
   .article-hero {
     &__img {
       position: relative;
-      margin-bottom: -45px;
       padding-bottom: 35%;
 
       img {
@@ -561,10 +560,6 @@
   .article-hero {
     &__title {
       font-size: 20px;
-    }
-
-    &__img {
-      margin-bottom: -60px;
     }
 
     &__card {
